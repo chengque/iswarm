@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	worktree = ../../../../../../../../../ros_ws/src/externalDependencies/libmotioncapture/externalDependencies/Qualisys2Ros
+[remote "origin"]
+	url = https://github.com/omwdunkley/Qualisys2Ros
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master

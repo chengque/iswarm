@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled 
+8d2502aa2af799794b586f04627da60443f1427b refs/remotes/origin/bigQuad
+679df6fd95f10dda52307ce54abc95e9ae32df3e refs/remotes/origin/libmotioncapture
+ef46c3b16b6141cdaf14128253965d8515964c3a refs/remotes/origin/master
+d081f72815926777a1ec33e33469762d1eab0ca6 refs/remotes/origin/paramBroadcast

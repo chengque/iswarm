@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	worktree = ../../../../../ros_ws/src/crazyflie_ros
+[remote "origin"]
+	url = https://github.com/whoenig/crazyflie_ros.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "crazyflie_cpp"]
+	url = https://github.com/whoenig/crazyflie_cpp.git
+[submodule "crazyflie_tools"]
+	url = https://github.com/whoenig/crazyflie_tools

@@ -1,0 +1,20 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	worktree = ../../../crazyflie-firmware
+[remote "origin"]
+	url = https://github.com/USC-ACTLab/crazyflie-firmware.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "vendor/CMSIS"]
+	url = https://github.com/ARM-software/CMSIS
+[submodule "vendor/cmock"]
+	url = https://github.com/throwtheswitch/cmock.git
+[submodule "vendor/libdw1000"]
+	url = https://github.com/bitcraze/libdw1000
+[submodule "vendor/unity"]
+	url = https://github.com/throwtheswitch/unity.git

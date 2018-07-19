@@ -1,0 +1,27 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/lucasyu17/crazyswarm
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "crazyflie-clients-python"]
+	url = https://github.com/bitcraze/crazyflie-clients-python.git
+[submodule "crazyflie-firmware"]
+	url = https://github.com/USC-ACTLab/crazyflie-firmware.git
+[submodule "crazyflie-lib-python"]
+	url = https://github.com/bitcraze/crazyflie-lib-python.git
+[submodule "crazyflie2-nrf-firmware"]
+	url = https://github.com/bitcraze/crazyflie2-nrf-firmware.git
+[submodule "crazyradio-firmware"]
+	url = https://github.com/bitcraze/crazyradio-firmware.git
+[submodule "ros_ws/src/crazyflie_ros"]
+	url = https://github.com/whoenig/crazyflie_ros.git
+[submodule "ros_ws/src/externalDependencies/libmotioncapture"]
+	url = https://github.com/USC-ACTLab/libmotioncapture.git
+[submodule "ros_ws/src/externalDependencies/libobjecttracker"]
+	url = https://github.com/USC-ACTLab/libobjecttracker

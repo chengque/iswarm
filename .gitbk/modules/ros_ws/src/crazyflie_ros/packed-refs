@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled 
+dcfcd95e3f30008722ff5b5a4a9cf191969f5dc1 refs/remotes/origin/CrazyflieUSB
+e22e0f1fa07417639911c00af85d4975eb4430a6 refs/remotes/origin/git_submodules
+e2d4069090afae44991720eada945a76d1dd76e4 refs/remotes/origin/high-level-setpoints
+dea069b10c4ad62dd3a18b9d6dc9971e2fe80f9c refs/remotes/origin/improvedController
+3cefc1edfd7cdcad7abc23b11c2b17e00ef97638 refs/remotes/origin/improvedControllerCpp
+1ddc5ffebab800042a2bb8df8a9e0f0f13cb405a refs/remotes/origin/issue27
+e10563f035cc267d845de1f8a585b004c89b92ee refs/remotes/origin/master
+8d69ea09ed445cda95918bca928b99713064f62b refs/remotes/origin/python
+ea801961dd35910a4eb9e4870eaea69514c0523f refs/remotes/origin/requestBatching

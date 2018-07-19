@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	worktree = ../../../../../../ros_ws/src/externalDependencies/libmotioncapture
+[remote "origin"]
+	url = https://github.com/USC-ACTLab/libmotioncapture.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "externalDependencies/NatNetLinux"]
+	url = https://github.com/naus3a/NatNetLinux
+[submodule "externalDependencies/Qualisys2Ros"]
+	url = https://github.com/omwdunkley/Qualisys2Ros

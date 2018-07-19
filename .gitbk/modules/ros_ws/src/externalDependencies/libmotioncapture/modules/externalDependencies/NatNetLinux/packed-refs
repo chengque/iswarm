@@ -1,0 +1,4 @@
+# pack-refs with: peeled fully-peeled 
+083601a8ed6ea1276e849a58497d60d91b18ae86 refs/remotes/origin/libmotioncapture
+cd1b31b8839a4e2a193ed5ef18854e6ad6372a9f refs/remotes/origin/master
+7894c6fa85c483882315cf80de2a5e7f4715535e refs/remotes/origin/sharedmemory
