@@ -8,6 +8,7 @@
 #include "crazyflie_driver/GenericLogData.h"
 #include "crazyflie_driver/UpdateParams.h"
 #include "crazyflie_driver/UploadTrajectory.h"
+#include "crazyflie_driver/TrajectoryRef.h"
 #undef major
 #undef minor
 #include "crazyflie_driver/Takeoff.h"
@@ -204,11 +205,15 @@ public:
     m_serviceLand = n.advertiseService(tf_prefix + "/land", &CrazyflieROS::land, this);
     m_serviceGoTo = n.advertiseService(tf_prefix + "/go_to", &CrazyflieROS::goTo, this);
     m_serviceSetGroupMask = n.advertiseService(tf_prefix + "/set_group_mask", &CrazyflieROS::setGroupMask, this);
+    m_serviceTrajectoryRef=n.advertiseService(tf_prefix + "/set_trajectory_ref", &CrazyflieROS::setTrajectoryRef, this);
     m_PosSetPoint.setZero();
     m_VelSetPoint.setZero();
     m_AccSetPoint.setZero();
     m_currentPosition.setZero();
     m_initialPosition.setZero();
+    m_positionRef.setZero();
+    m_velocityRef.setZero();
+    m_accelerationRef.setZero();
     m_dt=0.01;
     m_commander.initSps(m_PosSetPoint,m_VelSetPoint,m_AccSetPoint);
     m_rpy(0) = -3;
@@ -387,7 +392,28 @@ public:
 
     return true;
   }
-  void setTakeOffPos(const float& x,const float& y,const float& z){
+
+  bool setTrajectoryRef(
+            crazyflie_driver::TrajectoryRef::Request& req,
+            crazyflie_driver::TrajectoryRef::Response& res)
+    {
+      //ROS_INFO("[%s] Set Group Mask", m_frame.c_str());
+
+      m_positionRef(0)=req.x;
+      m_positionRef(1)=req.y;
+      m_positionRef(2)=req.z;
+      m_velocityRef(0)=req.vx;
+      m_velocityRef(1)=req.vy;
+      m_velocityRef(2)=req.vz;
+      m_accelerationRef(0)=req.ax;
+      m_accelerationRef(1)=req.ay;
+      m_accelerationRef(2)=req.az;
+
+      return true;
+    }
+
+
+    void setTakeOffPos(const float& x,const float& y,const float& z){
       m_commander.setTakeOffPos(x, y, z);
       m_initialPosition(0)=x;
       m_initialPosition(1)=y;
@@ -548,19 +574,19 @@ public:
   void getSetpoint()
   {
 //        m_commander.command_takeoff(0.02f);
-      m_PosSetPoint(0) =  m_initialPosition(0);
-      m_PosSetPoint(1) =  m_initialPosition(1);
-      m_PosSetPoint(2) = 0.5f;
+      m_PosSetPoint(0) =  m_initialPosition(0)+m_positionRef(0);
+      m_PosSetPoint(1) =  m_initialPosition(1)+m_positionRef(1);
+      m_PosSetPoint(2) = 0.0f + m_positionRef(2);
       m_PosSetPoint(3) = 0.0f; //yaw
-      std::cout<<m_initialPosition(0)<<m_initialPosition(1)<<std::endl;
+      std::cout<<"Pos ref:"<<m_PosSetPoint(0)<<","<<m_PosSetPoint(1)<<","<<m_PosSetPoint(2)<<std::endl;
 //
-      m_VelSetPoint(0) = 0.0f;
-      m_VelSetPoint(1) = 0.0f;
-      m_VelSetPoint(2) = 0.0f;
+      m_VelSetPoint(0) = 0.0f+m_velocityRef(0);
+      m_VelSetPoint(1) = 0.0f+m_velocityRef(1);
+      m_VelSetPoint(2) = 0.0f+m_velocityRef(2);
 
-      m_AccSetPoint(0) = 0.0f;
-      m_AccSetPoint(1) = 0.0f;
-      m_AccSetPoint(2) = 0.0f;
+      m_AccSetPoint(0) = 0.0f+m_accelerationRef(0);
+      m_AccSetPoint(1) = 0.0f+m_accelerationRef(1);
+      m_AccSetPoint(2) = 0.0f+m_accelerationRef(2);
 
   }
 
@@ -588,6 +614,7 @@ private:
   ros::ServiceServer m_serviceLand;
   ros::ServiceServer m_serviceGoTo;
   ros::ServiceServer m_serviceSetGroupMask;
+  ros::ServiceServer m_serviceTrajectoryRef;
 
   std::vector<crazyflie_driver::LogBlock> m_logBlocks;
   std::vector<ros::Publisher> m_pubLogDataGeneric;
@@ -598,11 +625,15 @@ private:
   std::ofstream m_logFile;
   bool m_forceNoCache;
   bool m_initializedPosition;
+
   float m_dt;
   //added by yhz
 public:
     Eigen::Vector3f m_currentPosition,m_VelSetPoint,m_AccSetPoint;
     Eigen::Vector3f m_initialPosition;
+    Eigen::Vector3f m_positionRef;
+    Eigen::Vector3f m_velocityRef;
+    Eigen::Vector3f m_accelerationRef;
     Eigen::Vector4f m_PosSetPoint;
     Controller m_controller;
     Commander m_commander;

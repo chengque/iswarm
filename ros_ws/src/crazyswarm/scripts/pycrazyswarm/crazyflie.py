@@ -8,6 +8,7 @@ import numpy as np
 import time
 from std_srvs.srv import Empty
 from crazyflie_driver.srv import *
+from crazyflie_driver.srv import TrajectoryRef
 from crazyflie_driver.msg import TrajectoryPolynomialPiece
 from tf import TransformListener
 
@@ -32,6 +33,7 @@ class TimeHelper:
 class Crazyflie:
     def __init__(self, id, initialPosition, tf):
         self.id = id
+        print "initialize cf "+ str(self.id)
         prefix = "/cf" + str(id)
         self.initialPosition = np.array(initialPosition)
 
@@ -53,6 +55,10 @@ class Crazyflie:
         # self.startTrajectoryService = rospy.ServiceProxy(prefix + "/start_trajectory", StartTrajectory)
         rospy.wait_for_service(prefix + "/update_params")
         self.updateParamsService = rospy.ServiceProxy(prefix + "/update_params", UpdateParams)
+
+        rospy.wait_for_service(prefix + "/set_trajectory_ref")
+        self.trajectoryRefService = rospy.ServiceProxy(prefix + "/set_trajectory_ref", TrajectoryRef)
+
 
     def setGroupMask(self, groupMask):
         self.setGroupMaskService(groupMask)
@@ -102,12 +108,28 @@ class Crazyflie:
             rospy.set_param(self.prefix + "/" + name, value)
         self.updateParamsService(params.keys())
 
+    def setTrajectoryRef(self, refTrj):
+        trj=TrajectoryRefRequest()
+        trj.x=refTrj[0]
+        trj.y=refTrj[1]
+        trj.z=refTrj[2]
+        trj.vx=refTrj[3]
+        trj.vy=refTrj[4]
+        trj.vz=refTrj[5]
+        trj.ax=refTrj[6]
+        trj.ay=refTrj[7]
+        trj.az=refTrj[8]
+        self.trajectoryRefService(trj)
+        print "cf "+str(self.id)+" set trajecotry"
+
 
 class CrazyflieServer:
     def __init__(self):
         rospy.init_node("CrazyflieAPI", anonymous=False)
+        print "wait"
         rospy.wait_for_service("/emergency")
         self.emergencyService = rospy.ServiceProxy("/emergency", Empty)
+        print "ok"
         rospy.wait_for_service("/takeoff")
         self.takeoffService = rospy.ServiceProxy("/takeoff", Takeoff)
         rospy.wait_for_service("/land")
@@ -121,19 +143,25 @@ class CrazyflieServer:
         # rospy.wait_for_service("/update_params")
         # self.updateParamsService = rospy.ServiceProxy("/update_params", UpdateParams)
 
+        print "okk"
+
         with open("../launch/crazyflies.yaml", 'r') as ymlfile:
             cfg = yaml.load(ymlfile)
+            print cfg
 
         self.tf = TransformListener()
 
         self.crazyflies = []
         self.crazyfliesById = dict()
+        i=0
         for crazyflie in cfg["crazyflies"]:
             id = int(crazyflie["id"])
             initialPosition = crazyflie["initialPosition"]
             cf = Crazyflie(id, initialPosition, self.tf)
             self.crazyflies.append(cf)
             self.crazyfliesById[id] = cf
+            i=i+1
+        print "totoal "+str(i)
 
     def emergency(self):
         self.emergencyService()

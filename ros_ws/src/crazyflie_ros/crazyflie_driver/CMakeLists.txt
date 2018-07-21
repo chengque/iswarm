@@ -41,6 +41,7 @@ add_service_files(
   UpdateParams.srv
   UploadTrajectory.srv
   sendPacket.srv
+  TrajectoryRef.srv
   getPosSetPoint.srv
 )
 

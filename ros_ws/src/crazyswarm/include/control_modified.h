@@ -60,7 +60,7 @@ public:
 	 char str_csv[50] ;
 	 sprintf(str_csv,"/home/chengque/workspace/Cfs%d.csv",0);
 	 Cf_csv.open(str_csv);printf("opened csv\n");
-	 Cf_csv  <<"x,y,z,vx,vy,vz,svx,svy,svz,ox,oy,oz\n";
+	 Cf_csv  <<"sx,sy,sz,x,y,z,vx,vy,vz,svx,svy,svz,ox,oy,oz\n";
 	};
 
 	const float w_Vicon = 1.0f;
