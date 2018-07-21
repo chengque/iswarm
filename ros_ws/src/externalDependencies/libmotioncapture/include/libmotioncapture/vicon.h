@@ -45,9 +45,11 @@ namespace libmotioncapture {
     virtual bool supportsObjectTracking() const;
     virtual bool supportsLatencyEstimate() const;
     virtual bool supportsPointCloud() const;
+    virtual float getTimeIncrement() const;
 
   private:
     MotionCaptureViconImpl* pImpl;
+    mutable float m_last_time;
   };
 
 } // namespace libobjecttracker

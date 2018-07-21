@@ -178,4 +178,12 @@ namespace libmotioncapture {
   {
     return true;
   }
+
+  float MotionCaptureQualisys::getTimeIncrement() const
+  {
+     return 0.01;
+  }
+
+
+
 }

@@ -45,6 +45,7 @@ namespace libmotioncapture {
     virtual bool supportsObjectTracking() const;
     virtual bool supportsLatencyEstimate() const;
     virtual bool supportsPointCloud() const;
+    virtual float getTimeIncrement() const;
 
   private:
     MotionCapturePhasespaceImpl* pImpl;

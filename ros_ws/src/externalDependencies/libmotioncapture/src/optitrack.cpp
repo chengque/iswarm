@@ -132,5 +132,13 @@ namespace libmotioncapture {
   {
     return true;
   }
+
+  float MotionCaptureOptitrack::getTimeIncrement() const
+  {
+     return 0.01;
+  }
+
+
+
 }
 

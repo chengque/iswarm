@@ -79,6 +79,8 @@ Threading
 constexpr double pi() { return std::atan(1)*4; }
 int isStartTr = 0;
 long cnt = 0;
+
+float g_dt=0.01;
 double degToRad(double deg) {
     return deg / 180.0 * pi();
 }
@@ -206,6 +208,8 @@ public:
     m_VelSetPoint.setZero();
     m_AccSetPoint.setZero();
     m_currentPosition.setZero();
+    m_initialPosition.setZero();
+    m_dt=0.01;
     m_commander.initSps(m_PosSetPoint,m_VelSetPoint,m_AccSetPoint);
     m_rpy(0) = -3;
     if (m_enableLogging) {
@@ -385,6 +389,10 @@ public:
   }
   void setTakeOffPos(const float& x,const float& y,const float& z){
       m_commander.setTakeOffPos(x, y, z);
+      m_initialPosition(0)=x;
+      m_initialPosition(1)=y;
+      m_initialPosition(2)=z;
+      std::cout<<"Initial position:"<<x<<y<<z<<std::endl;
   }
   void run(
     ros::CallbackQueue& queue)
@@ -540,10 +548,11 @@ public:
   void getSetpoint()
   {
 //        m_commander.command_takeoff(0.02f);
-      m_PosSetPoint(0) = 0.0f;
-      m_PosSetPoint(1) = 0.0f;
+      m_PosSetPoint(0) =  m_initialPosition(0);
+      m_PosSetPoint(1) =  m_initialPosition(1);
       m_PosSetPoint(2) = 0.5f;
       m_PosSetPoint(3) = 0.0f; //yaw
+      std::cout<<m_initialPosition(0)<<m_initialPosition(1)<<std::endl;
 //
       m_VelSetPoint(0) = 0.0f;
       m_VelSetPoint(1) = 0.0f;
@@ -561,6 +570,7 @@ public:
       m_currentPosition(1) = y;
       m_currentPosition(2) = z;
   }
+
 
 private:
   Crazyflie m_cf;
@@ -588,9 +598,11 @@ private:
   std::ofstream m_logFile;
   bool m_forceNoCache;
   bool m_initializedPosition;
+  float m_dt;
   //added by yhz
 public:
     Eigen::Vector3f m_currentPosition,m_VelSetPoint,m_AccSetPoint;
+    Eigen::Vector3f m_initialPosition;
     Eigen::Vector4f m_PosSetPoint;
     Controller m_controller;
     Commander m_commander;
@@ -792,7 +804,7 @@ public:
                 sp_states.back().roll = 0.0f;
                 sp_states.back().pitch = 0.0f;
                 sp_states.back().yaw = 0.0f;
-                sp_states.back().thrust = 3000.0f;
+                sp_states.back().thrust = 500.0f;
             }
 
           m_cfs[i]->initializePositionIfNeeded(states.back().x, states.back().y, states.back().z);
@@ -838,7 +850,7 @@ public:
                     Groupcontrol(sp_states[i].id,sp_states[i]);
                 }
             }
-            std::cout<<"setpoint ouside(trpy): "<<sp_states.back().thrust<<"; "
+            std::cout<<"setpoint ouside(trpy): "<< sp_states.back().thrust <<"; "
                      <<sp_states.back().roll<<"; "
                      <<sp_states.back().pitch<<"; "
                      <<sp_states.back().yaw<<std::endl<<std::endl;
@@ -924,7 +936,7 @@ public:
       CrazyflieROS *cf = m_CrazyflieIdMap[id];
       cf->m_controller.control_nonLineaire(cf->m_currentPosition,
                                                       cf->m_PosSetPoint, cf->m_VelSetPoint, cf->m_AccSetPoint, Euler,
-                                                      0.01f, &vec4ftmp);
+                                                      g_dt, &vec4ftmp);
       sp_state.roll = vec4ftmp(0);
       sp_state.pitch = vec4ftmp(1);
       sp_state.yaw = vec4ftmp(2);
@@ -1537,6 +1549,9 @@ public:
     while (ros::ok() && !m_isEmergency) {
       // Get a frame
       mocap->waitForNextFrame();
+      g_dt=mocap->getTimeIncrement();
+
+      std::cout<<"g_dt:"<<g_dt<<endl;
 
       latencies.clear();
 

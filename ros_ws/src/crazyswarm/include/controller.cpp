@@ -71,7 +71,7 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
         acc_Sp_net = _acc_Sp_W;
 
 //        _acc_Sp_W(2) = _acc_Sp_W(2) + GRAVITY/100.0f * (float)VEHICLE_MASS;//9810 40
-        _acc_Sp_W(2) = _acc_Sp_W(2) + 4800;
+        _acc_Sp_W(2) = _acc_Sp_W(2) + 5200;
 
         vec3f_passnorm(&_acc_Sp_W, &_Zb_des);
 
@@ -120,6 +120,9 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
         thrust_force = std::min(thrust_force,max_thrust);
 //        thrust_force = 2500.0f;
         (*Output)(3) = thrust_force;
+        Cf_csv <<x_temp_est <<","<< y_temp_est << "," << z_temp_est << "," <<vel_estVicon(0)<< "," << vel_estVicon(1)
+                                  << "," << vel_estVicon(2) << "," << vel_Sp(0) << "," << vel_Sp(1)<<"," << vel_Sp(2) 
+                                  << "," << (*Output)(0)<<"," << (*Output)(1)<<"," << (*Output)(3)<<"\n";
 
     }
 //    return *Output;

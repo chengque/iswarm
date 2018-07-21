@@ -1,4 +1,5 @@
 #include <math.h>
+#include <fstream>
 #include "type_methode.h"
 //#include <tf_conversions/tf_eigen.h>
 #include "commons.h"
@@ -14,7 +15,7 @@ public:
 	//, m_resFnameRoot("/home/walt/catkin_ws/src/crazyflie_ros-first_trails/easyfly/resultat/vehicle0/")
 		,m_pidX(210.0, 0.5, 2, 5, 0.0, -5e4, 5e4, -3, 3) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
 		,m_pidY(210.0, 0.5, 2, 5, 0.0, -5e4, 5e4, -3, 3)//kp 22 kd 1.8 ki 2.0 kpp 7
-		,m_pidZ(230.0, 1.65, 5.0, 5.0, 0.0, -5e4, 5e4, -2, 2)//kpp 3 170
+		,m_pidZ(2000.0, 1.65, 50, 5.0, 0.0, -5e4, 5e4, -1000, 1000)//kpp 3 170
 //            ,m_pidX(10.0, 0.5, 1, 200, 0.0, -1e6, 1e6, -3, 3) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
 //            ,m_pidY(10.0, 0.5, 1, 200, 0.0, -1e6, 1e6, -3, 3)//kp 22 kd 1.8 ki 2.0 kpp 7
 //            ,m_pidZ(5.0, 1.65, 5.0, 220.0, 0.0, -1e6, 1e6, -2, 2)//kpp 3 170
@@ -56,6 +57,10 @@ public:
 	 m_pidZ.reset();
 	 
 	 printf("hello!! control.h\n");
+	 char str_csv[50] ;
+	 sprintf(str_csv,"/home/chengque/workspace/Cfs%d.csv",0);
+	 Cf_csv.open(str_csv);printf("opened csv\n");
+	 Cf_csv  <<"x,y,z,vx,vy,vz,svx,svy,svz,ox,oy,oz\n";
 	};
 
 	const float w_Vicon = 1.0f;
@@ -68,7 +73,7 @@ public:
     const int num_redording = 4096;
 //    const float max_thrust = 0.5827*1.3;
     const float amplifier=13200;
-	const float max_thrust = amplifier*GRAVITY*MAX_THRUST/1000000.0f;
+	const float max_thrust = 6000;//amplifier*GRAVITY*MAX_THRUST/1000000.0f;
 
 	const float KPxy = 0.06, KVxy = 0.02;//added by xs
 	const float KPz = 0.18, KVz = 0.06;
@@ -80,6 +85,7 @@ public:
 	char m_resFnameRoot[150];
 	int loop_record;
 	int m_group_index;
+	std::ofstream Cf_csv;
 protected:
 	//att:
 	Eigen::Vector3f  e_R;

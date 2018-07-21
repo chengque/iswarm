@@ -12,6 +12,7 @@ namespace libmotioncapture {
   public:
     Client client;
     std::string version;
+
   };
 
   MotionCaptureVicon::MotionCaptureVicon(
@@ -46,6 +47,7 @@ namespace libmotioncapture {
     std::stringstream sstr;
     sstr << version.Major << "." << version.Minor << "." << version.Point;
     pImpl->version = sstr.str();
+    m_last_time=0.0f;
   }
 
   MotionCaptureVicon::~MotionCaptureVicon()
@@ -130,6 +132,32 @@ namespace libmotioncapture {
       double      sampleValue = pImpl->client.GetLatencySampleValue(sampleName).Value;
       result.emplace_back(LatencyInfo(sampleName, sampleValue));
     }
+  }
+
+  float MotionCaptureVicon::getTimeIncrement() const
+  {
+     Output_GetFrameNumber output;
+     output=pImpl->client.GetFrameNumber();
+     Output_GetFrameRate outframerate=pImpl->client.GetFrameRate();
+     if(outframerate.FrameRateHz>0)
+    {
+        float t=output.FrameNumber/outframerate.FrameRateHz;
+        float dt=t-m_last_time;
+        //std::cout<<"test:"<<t<<m_last_time<<std::endl;
+        m_last_time=t;
+
+        if((dt<0.1) && (dt>0))
+        {
+          return dt;
+        }
+        return 0.011;
+    }
+    else
+    {
+        return 0.012;
+    }
+
+
   }
 
   bool MotionCaptureVicon::supportsObjectTracking() const

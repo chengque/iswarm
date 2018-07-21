@@ -212,4 +212,8 @@ namespace libmotioncapture {
   {
     return true;
   }
+
+  float MotionCapturePhasespace::getTimeIncrement() const
+     return 0.01;
+  }
 }

@@ -50,7 +50,6 @@ public:
         m_serviceLand = nh.serviceClient<crazyflie_driver::Land>("/land");
         ros::service::waitForService("/getServerPosSetPoint");
         m_servicePosSp = nh.serviceClient<crazyflie_driver::getPosSetPoint>("/getServerPosSetPoint");
-
         ROS_INFO("Manager ready.");
     }
 

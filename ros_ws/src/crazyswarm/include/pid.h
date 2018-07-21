@@ -81,7 +81,7 @@ public:
 			float i = m_ki * m_integral;
 //			float output = p + d + i;
 //			cout<<"i="<<i<<endl;//by xs
-			float output = p + d ;
+			float output = p + d + i;
 			m_previousError = error;
 			//m_previousTime = time;
 			float result = std::max(std::min(output, m_maxOutput), m_minOutput);

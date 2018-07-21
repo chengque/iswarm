@@ -123,6 +123,7 @@ namespace libmotioncapture {
     virtual bool supportsLatencyEstimate() const = 0;
     // returns true if raw point cloud is available
     virtual bool supportsPointCloud() const = 0;
+    virtual float getTimeIncrement() const=0;
   };
 
 } // namespace libobjecttracker
