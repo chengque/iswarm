@@ -2,7 +2,81 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="crazyswarm" targetName="crazyswarm" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="tf_generate_messages_py" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="quadrotor_teleop" />
+      <config projectName="Project" targetName="crazyflie_driver_gencpp" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_Hover" />
+      <config projectName="Project" targetName="tf_generate_messages_cpp" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="commander" />
+      <config projectName="Project" targetName="crazyflie_driver_generate_messages_cpp" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_RemoveCrazyflie" />
+      <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="download_extra_data" />
+      <config projectName="Project" targetName="crazyflie_cpp" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_Land" />
+      <config projectName="Project" targetName="gtest_main" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_sendPacket" />
+      <config projectName="Project" targetName="tests" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_getPosSetPoint" />
+      <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="Project" targetName="crazyflie_add" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_crtpPacket" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="roscpp_generate_messages_py" />
+      <config projectName="Project" targetName="_catkin_empty_exported_target" />
+      <config projectName="Project" targetName="crazyflie_driver_generate_messages_py" />
+      <config projectName="Project" targetName="crazyflie_server" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_GoTo" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="clean_test_results" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="crazyflie_controller" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_UpdateParams" />
+      <config projectName="Project" targetName="type_methode" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="gtest" />
+      <config projectName="Project" targetName="crazyswarm_teleop" />
+      <config projectName="Project" targetName="crazyswarm_server" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_Stop" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_TrajectoryPolynomialPiece" />
+      <config projectName="Project" targetName="actionlib_generate_messages_py" />
+      <config projectName="Project" targetName="crazyflie_driver_genlisp" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_UploadTrajectory" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_Position" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="crazyflie_driver_generate_messages_lisp" />
+      <config projectName="Project" targetName="libmotioncapture" />
+      <config projectName="Project" targetName="libobjecttracker" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_TrajectoryRef" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_AddCrazyflie" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_GenericLogData" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="tf_generate_messages_lisp" />
+      <config projectName="Project" targetName="crazyflie_driver_genpy" />
+      <config projectName="Project" targetName="doxygen" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_Takeoff" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="crazyflie_driver_generate_messages" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_LogBlock" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_StartTrajectory" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_SetGroupMask" />
+      <config projectName="Project" targetName="_crazyflie_driver_generate_messages_check_deps_FullState" />
+      <config projectName="Project" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="Project" targetName="mocap_helper" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="run_tests" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="controller" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -12,11 +86,107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38fddb8a-e1b6-4957-823f-53442ab8db75" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/TrajectoryRef.srv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/trjtest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/control_modified.h" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/control_modified.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflieTypes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflieTypes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflies.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflies.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs0.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs00.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs00.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs01.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs01.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs02.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs02.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs03.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs03.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs04.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs04.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs05.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs05.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs06.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs06.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs07.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs07.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs08.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/Cfs08.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/chooser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/chooser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing2_pps/pp1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing2_pps/pp1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing2_pps/pp2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing2_pps/pp2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing4_pps/pp1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing4_pps/pp1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing4_pps/pp2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing4_pps/pp2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing4_pps/pp3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing4_pps/pp3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing4_pps/pp4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/crossing4_pps/pp4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/individual_hover.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/individual_hover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/niceHover.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/niceHover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/check_yaml_pps.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/check_yaml_pps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/cone.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/cone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/controller_step.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/controller_step.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/cross.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/cross.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/crossing2.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/crossing2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/demo1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/demo1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/demo2.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/demo2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/demo_optimize_waypoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/demo_optimize_waypoints.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/execute_trajectories.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/execute_trajectories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/figure8_canned.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/figure8_canned.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/figure8_canned_3x.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/figure8_canned_3x.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/figure8_canned_cont.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/figure8_canned_cont.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/hover.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/hover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/multicone.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/multicone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/plot_trajectory.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/plot_trajectory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/pyramid.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/pyramid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/rotgrid.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/rotgrid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/tapfTest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/tapfTest1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testDownwashHorizontal.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testDownwashHorizontal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testDownwashVertical.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testDownwashVertical.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testFastHover.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testFastHover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testParams.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testParams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testPlot.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testPlot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testSim1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testSim1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testSpeed.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/testSpeed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/unity.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/unity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/usc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/usc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/plotcsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/plotcsv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/cffirmware.i" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/cffirmware.i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflie.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflieSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflieSim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyswarm.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyswarm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/genericJoystick.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/genericJoystick.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/joystick.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/joystick.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/keyboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/keyboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/linuxjsdev.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/linuxjsdev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/output.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/output.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/piecewise.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/piecewise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/snap.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/snap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/testCrazyflieSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/testCrazyflieSim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/testVispy.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/testVispy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/trajectory.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/trajectory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/visualizer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/visualizer/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/visualizer/crazyflie2.obj.gz" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/visualizer/crazyflie2.obj.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/visualizer/visMatplotlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/visualizer/visMatplotlib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/visualizer/visVispy.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/visualizer/visVispy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/swap6v_pps/pp6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/testGroup.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/testGroup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/trjtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/trjtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/uav_trajectory.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/uav_trajectory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/udp_multicast.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/udp_multicast.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/waypoints.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/waypoints.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/waypoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/waypoints.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_server.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/ros_ws/src/cmake-build-debug/" />
@@ -34,121 +204,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="control_modified.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/control_modified.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3570">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding>
+                <element signature="e#102#122#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crazyswarm_teleop.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_teleop.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crazyflieTypes.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflieTypes.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="15" selection-start-column="15" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mytraj.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/mytraj.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crazyflies.yaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflies.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allCrazyflies.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/allCrazyflies.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="crazyswarm_server.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_server.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="578" column="32" selection-start-line="578" selection-start-column="32" selection-end-line="578" selection-end-column="32" />
+            <state relative-caret-position="119">
+              <caret line="1577" column="53" selection-start-line="1577" selection-start-column="53" selection-end-line="1577" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crazyflie.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflie.py">
+      <file leaf-file-name="uav_trajectory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/uav_trajectory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
+            <state relative-caret-position="901">
+              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plotcsv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/plotcsv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
               <folding>
-                <element signature="e#24#34#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crazyswarm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyswarm.py">
+      <file leaf-file-name="controller.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/controller.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="356">
+              <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crazyflieSim.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflieSim.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-348">
-              <caret line="121" column="28" selection-start-line="121" selection-start-column="28" selection-end-line="121" selection-end-column="28" />
-              <folding>
-                <element signature="e#23#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cffirmware.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/cffirmware.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7471">
-              <caret line="715" column="21" selection-start-line="715" selection-start-column="21" selection-end-line="715" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="snap.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/snap.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1020" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trajectory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/trajectory.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-612">
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="figure8_csv.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8_csv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-              <folding>
-                <element signature="e#23#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trjtest.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/trjtest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Takeoff.srv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/Takeoff.srv">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
-      <find>R_des</find>
-      <find>_R_des</find>
-      <find>m_sendAttSp</find>
-      <find>Groupcontrol</find>
-      <find>modeA</find>
-      <find>modeDisable</find>
-      <find>yaw</find>
-      <find>sp_states</find>
-      <find>sendAttSps</find>
-      <find>*</find>
-      <find>control_nonLineaire</find>
-      <find>thrust_force</find>
       <find>1000</find>
       <find>thrus</find>
       <find>sp_state</find>
@@ -166,6 +324,19 @@
       <find>SERVICE</find>
       <find>step</find>
       <find>sleep</find>
+      <find>setpt</find>
+      <find>vel_Sp</find>
+      <find>m_positionRef</find>
+      <find>min</find>
+      <find>m_id</find>
+      <find>Conto</find>
+      <find>ouside</find>
+      <find>std::endl</find>
+      <find>control</find>
+      <find>printf</find>
+      <find>ousid</find>
+      <find>cout</find>
+      <find>g_dt</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts</dir>
@@ -201,19 +372,21 @@
         <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/hover_swarm.launch" />
         <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/commander.h" />
         <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/src/communicationTest.cpp" />
-        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/control_modified.h" />
         <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/commander.cpp" />
-        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflieTypes.yaml" />
         <option value="$PROJECT_DIR$/crazyflie-firmware/src/modules/src/stabilizer.c" />
-        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/controller.cpp" />
         <option value="$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_cpp/src/Crazyflie.cpp" />
         <option value="$PROJECT_DIR$/crazyflie-firmware/src/modules/src/crtp_localization_service.c" />
         <option value="$PROJECT_DIR$/crazyflie-firmware/src/modules/src/controller_mellinger.c" />
         <option value="$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/TrajectoryRef.srv" />
         <option value="$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflie.py" />
-        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_server.cpp" />
         <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/trjtest.py" />
+        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflieTypes.yaml" />
+        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/control_modified.h" />
+        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/plotcsv.py" />
+        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_server.cpp" />
+        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/mytraj.py" />
+        <option value="$PROJECT_DIR$/ros_ws/src/crazyswarm/include/controller.cpp" />
       </list>
     </option>
   </component>
@@ -228,72 +401,44 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
+    <option name="x" value="243" />
     <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="width" value="1600" />
+    <option name="height" value="848" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
               <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
-              <item name="crazyflie-firmware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
-              <item name="crazyflie-firmware" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
               <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
               <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
               <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
               <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
-              <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="crazyflie_ros" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
-              <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="crazyflie_ros" type="462c0819:PsiDirectoryNode" />
-              <item name="crazyflie_driver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
-              <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="crazyflie_ros" type="462c0819:PsiDirectoryNode" />
-              <item name="crazyflie_driver" type="462c0819:PsiDirectoryNode" />
-              <item name="srv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
               <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
               <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -301,6 +446,7 @@
             </path>
             <path>
               <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
               <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
               <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -309,6 +455,16 @@
             </path>
             <path>
               <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
+              <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
+              <item name="launch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
               <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
               <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -317,15 +473,7 @@
             </path>
             <path>
               <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
-              <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="pycrazyswarm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crazyswarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crazyswarm" type="47feb1d3:ProjectViewModuleNode" />
               <item name="crazyswarm" type="462c0819:PsiDirectoryNode" />
               <item name="ros_ws" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -336,6 +484,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,12 +515,160 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.crazyswarm">
+  <component name="RunManager" selected="Application.crazyflie_controller">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="crazyswarm" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="crazyswarm" TARGET_NAME="crazyswarm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="crazyswarm" RUN_TARGET_NAME="crazyswarm" />
+    <configuration name="_catkin_empty_exported_target" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_catkin_empty_exported_target" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_AddCrazyflie" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_AddCrazyflie" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_FullState" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_FullState" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_GenericLogData" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_GenericLogData" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_GoTo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_GoTo" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_Hover" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_Hover" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_Land" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_Land" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_LogBlock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_LogBlock" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_Position" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_Position" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_RemoveCrazyflie" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_RemoveCrazyflie" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_SetGroupMask" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_SetGroupMask" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_StartTrajectory" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_StartTrajectory" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_Stop" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_Stop" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_Takeoff" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_Takeoff" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_TrajectoryPolynomialPiece" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_TrajectoryPolynomialPiece" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_TrajectoryRef" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_TrajectoryRef" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_UpdateParams" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_UpdateParams" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_UploadTrajectory" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_UploadTrajectory" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_crtpPacket" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_crtpPacket" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_getPosSetPoint" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_getPosSetPoint" CONFIG_NAME="Debug" />
+    <configuration name="_crazyflie_driver_generate_messages_check_deps_sendPacket" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_crazyflie_driver_generate_messages_check_deps_sendPacket" CONFIG_NAME="Debug" />
+    <configuration name="actionlib_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="actionlib_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="actionlib_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="actionlib_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_msgs_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="actionlib_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_msgs_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="actionlib_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_msgs_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="clean_test_results" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="clean_test_results" CONFIG_NAME="Debug" />
+    <configuration name="commander" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="commander" CONFIG_NAME="Debug" />
+    <configuration name="controller" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="controller" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_add" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_add" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="crazyflie_add" />
+    <configuration name="crazyflie_controller" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_controller" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="crazyflie_controller" />
+    <configuration name="crazyflie_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_cpp" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_driver_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_driver_gencpp" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_driver_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_driver_generate_messages" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_driver_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_driver_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_driver_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_driver_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_driver_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_driver_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_driver_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_driver_genlisp" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_driver_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_driver_genpy" CONFIG_NAME="Debug" />
+    <configuration name="crazyflie_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyflie_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="crazyflie_server" />
+    <configuration name="crazyswarm_server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyswarm_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="crazyswarm_server" />
+    <configuration name="crazyswarm_teleop" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="crazyswarm_teleop" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="crazyswarm_teleop" />
+    <configuration name="download_extra_data" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="download_extra_data" CONFIG_NAME="Debug" />
+    <configuration name="doxygen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="doxygen" CONFIG_NAME="Debug" />
+    <configuration name="geometry_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="geometry_msgs_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="geometry_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="geometry_msgs_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="geometry_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="geometry_msgs_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="gtest" CONFIG_NAME="Debug" />
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="gtest_main" CONFIG_NAME="Debug" />
+    <configuration name="libmotioncapture" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="libmotioncapture" CONFIG_NAME="Debug" />
+    <configuration name="libobjecttracker" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="libobjecttracker" CONFIG_NAME="Debug" />
+    <configuration name="mocap_helper" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="mocap_helper" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="mocap_helper" />
+    <configuration name="quadrotor_teleop" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="quadrotor_teleop" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="quadrotor_teleop" />
+    <configuration name="roscpp_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="roscpp_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="roscpp_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="roscpp_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="roscpp_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="roscpp_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="rosgraph_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rosgraph_msgs_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="rosgraph_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rosgraph_msgs_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="rosgraph_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rosgraph_msgs_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="run_tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="run_tests" CONFIG_NAME="Debug" />
+    <configuration name="sensor_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="sensor_msgs_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="sensor_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="sensor_msgs_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="sensor_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="sensor_msgs_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="std_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="std_msgs_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="std_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="std_msgs_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="std_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="std_msgs_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tests" CONFIG_NAME="Debug" />
+    <configuration name="tf2_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf2_msgs_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="tf2_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf2_msgs_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="tf2_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf2_msgs_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="tf_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf_generate_messages_cpp" CONFIG_NAME="Debug" />
+    <configuration name="tf_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf_generate_messages_lisp" CONFIG_NAME="Debug" />
+    <configuration name="tf_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf_generate_messages_py" CONFIG_NAME="Debug" />
+    <configuration name="type_methode" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="type_methode" CONFIG_NAME="Debug" />
     <list>
       <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.crazyswarm" />
+      <item itemvalue="Application.clean_test_results" />
+      <item itemvalue="Application.download_extra_data" />
+      <item itemvalue="Application.doxygen" />
+      <item itemvalue="Application.run_tests" />
+      <item itemvalue="Application.tests" />
+      <item itemvalue="Application._catkin_empty_exported_target" />
+      <item itemvalue="Application.actionlib_generate_messages_cpp" />
+      <item itemvalue="Application.actionlib_generate_messages_lisp" />
+      <item itemvalue="Application.actionlib_generate_messages_py" />
+      <item itemvalue="Application.actionlib_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.actionlib_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.actionlib_msgs_generate_messages_py" />
+      <item itemvalue="Application.crazyflie_controller" />
+      <item itemvalue="Application.geometry_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.geometry_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.geometry_msgs_generate_messages_py" />
+      <item itemvalue="Application.roscpp_generate_messages_cpp" />
+      <item itemvalue="Application.roscpp_generate_messages_lisp" />
+      <item itemvalue="Application.roscpp_generate_messages_py" />
+      <item itemvalue="Application.rosgraph_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.rosgraph_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.rosgraph_msgs_generate_messages_py" />
+      <item itemvalue="Application.sensor_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.sensor_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.sensor_msgs_generate_messages_py" />
+      <item itemvalue="Application.std_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.std_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.std_msgs_generate_messages_py" />
+      <item itemvalue="Application.tf2_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.tf2_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.tf2_msgs_generate_messages_py" />
+      <item itemvalue="Application.tf_generate_messages_cpp" />
+      <item itemvalue="Application.tf_generate_messages_lisp" />
+      <item itemvalue="Application.tf_generate_messages_py" />
+      <item itemvalue="Application.crazyflie_cpp" />
+      <item itemvalue="Application.quadrotor_teleop" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_AddCrazyflie" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_crtpPacket" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_FullState" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_GenericLogData" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_getPosSetPoint" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_GoTo" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_Hover" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_Land" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_LogBlock" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_Position" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_RemoveCrazyflie" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_sendPacket" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_SetGroupMask" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_StartTrajectory" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_Stop" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_Takeoff" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_TrajectoryPolynomialPiece" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_TrajectoryRef" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_UpdateParams" />
+      <item itemvalue="Application._crazyflie_driver_generate_messages_check_deps_UploadTrajectory" />
+      <item itemvalue="Application.crazyflie_add" />
+      <item itemvalue="Application.crazyflie_driver_gencpp" />
+      <item itemvalue="Application.crazyflie_driver_generate_messages" />
+      <item itemvalue="Application.crazyflie_driver_generate_messages_cpp" />
+      <item itemvalue="Application.crazyflie_driver_generate_messages_lisp" />
+      <item itemvalue="Application.crazyflie_driver_generate_messages_py" />
+      <item itemvalue="Application.crazyflie_driver_genlisp" />
+      <item itemvalue="Application.crazyflie_driver_genpy" />
+      <item itemvalue="Application.crazyflie_server" />
+      <item itemvalue="Application.commander" />
+      <item itemvalue="Application.controller" />
+      <item itemvalue="Application.crazyswarm_server" />
+      <item itemvalue="Application.crazyswarm_teleop" />
+      <item itemvalue="Application.mocap_helper" />
+      <item itemvalue="Application.type_methode" />
+      <item itemvalue="Application.libmotioncapture" />
+      <item itemvalue="Application.libobjecttracker" />
+      <item itemvalue="Application.gtest" />
+      <item itemvalue="Application.gtest_main" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -401,33 +698,36 @@
       <workItem from="1531446836067" duration="1022000" />
       <workItem from="1531467900763" duration="68000" />
       <workItem from="1532141501772" duration="9013000" />
+      <workItem from="1532309142719" duration="1667000" />
+      <workItem from="1532916979184" duration="7767000" />
+      <workItem from="1532998848703" duration="8585000" />
+      <workItem from="1533519837804" duration="12848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146257000" />
+    <option name="totallyTimeSpent" value="177124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1602" height="912" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.25174826" visible="true" weight="0.260625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8341709" visible="true" weight="0.260625" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.18922305" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.10175879" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info id="Structure" order="1" sideWeight="0.74825174" side_tool="true" visible="true" weight="0.260625" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" sideWeight="0.16582915" side_tool="true" visible="true" weight="0.260625" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32991913" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.10175879" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -457,10 +757,47 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/plotcsv.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/mytraj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="e#23#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/trjtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#23#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/ros_ws/src/crazyswarm/launch/allCrazyflies.yaml" />
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_serverss.cpp" />
     <entry file="file://$PROJECT_DIR$/ros_ws/src/externalDependencies/libobjecttracker/src/object_tracker.cpp">
@@ -510,13 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_teleop.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2604">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/hover_swarm (复件).launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -528,20 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflies.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/allCrazyflies.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -560,13 +876,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/src/communicationTest.cpp" />
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/control_modified.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/commander.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
@@ -574,31 +883,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/hover_swarm.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflieTypes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2583">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/commander.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3381">
           <caret line="161" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/controller.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -651,20 +939,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/StartTrajectory.srv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/old/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/uav_trajectory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -682,36 +960,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/Stop.srv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/Takeoff.srv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/cfsim/cffirmware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7471">
+        <state relative-caret-position="12155">
           <caret line="715" column="21" selection-start-line="715" selection-start-column="21" selection-end-line="715" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#23#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyswarm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="357">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -720,38 +979,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
-          <folding>
-            <element signature="e#24#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1717">
+          <caret line="110" column="23" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_server.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="578" column="32" selection-start-line="578" selection-start-column="32" selection-end-line="578" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/trajectory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/snap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/pycrazyswarm/crazyflieSim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-348">
+        <state relative-caret-position="1989">
           <caret line="121" column="28" selection-start-line="121" selection-start-column="28" selection-end-line="121" selection-end-column="28" />
           <folding>
             <element signature="e#23#34#0" expanded="true" />
@@ -759,10 +994,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/hover_swarm.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/trjtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="391">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#23#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/figure8_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding>
+            <element signature="e#23#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/pid.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/uav_trajectory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflieTypes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/plotcsv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/control_modified.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3570">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="e#102#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_teleop.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/src/crazyswarm_server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="1577" column="53" selection-start-line="1577" selection-start-column="53" selection-end-line="1577" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/scripts/mytraj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/include/controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/allCrazyflies.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros_ws/src/crazyswarm/launch/crazyflies.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

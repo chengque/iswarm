@@ -9,13 +9,12 @@
 class Controller
 {
 public:
-	Controller()
+	Controller(int id)
 	: loop_record(0)
 	, m_group_index(0)
-	//, m_resFnameRoot("/home/walt/catkin_ws/src/crazyflie_ros-first_trails/easyfly/resultat/vehicle0/")
-		,m_pidX(210.0, 0.5, 2, 5, 0.0, -5e4, 5e4, -3, 3) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
-		,m_pidY(210.0, 0.5, 2, 5, 0.0, -5e4, 5e4, -3, 3)//kp 22 kd 1.8 ki 2.0 kpp 7
-		,m_pidZ(2000.0, 1.65, 50, 5.0, 0.0, -5e4, 5e4, -1000, 1000)//kpp 3 170
+	,m_pidX(500.0, 0.8, 10.0, 3.0, 0.0, -5e4, 5e4, -30, 30) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
+	,m_pidY(500.0, 0.8, 10.0, 3.0, 0.0, -5e4, 5e4, -30, 30)//kp 22 kd 1.8 ki 2.0 kpp 7	//, m_resFnameRoot("/home/walt/catkin_ws/src/crazyflie_ros-first_trails/easyfly/resultat/vehicle0/")
+	,m_pidZ(800.0, 1.65, 50, 2.0, 0.0, -5e4, 5e4, -1000, 1000)//kpp 3 170
 //            ,m_pidX(10.0, 0.5, 1, 200, 0.0, -1e6, 1e6, -3, 3) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
 //            ,m_pidY(10.0, 0.5, 1, 200, 0.0, -1e6, 1e6, -3, 3)//kp 22 kd 1.8 ki 2.0 kpp 7
 //            ,m_pidZ(5.0, 1.65, 5.0, 220.0, 0.0, -1e6, 1e6, -2, 2)//kpp 3 170
@@ -58,7 +57,7 @@ public:
 	 
 	 printf("hello!! control.h\n");
 	 char str_csv[50] ;
-	 sprintf(str_csv,"/home/chengque/workspace/Cfs%d.csv",0);
+	 sprintf(str_csv,"/home/chengque/workspace/Cfs%d.csv",id);
 	 Cf_csv.open(str_csv);printf("opened csv\n");
 	 Cf_csv  <<"sx,sy,sz,x,y,z,vx,vy,vz,svx,svy,svz,ox,oy,oz\n";
 	};

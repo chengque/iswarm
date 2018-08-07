@@ -20,18 +20,30 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
         float y_sp = pos_Sp(1);
         float z_sp = pos_Sp(2);
 
+        /*cout<<"sp control (xyz)="<< pos_Sp(0) <<"   "<<
+            pos_Sp(1)  <<"   "<<
+            pos_Sp(2) <<endl;
+
+        cout<<"est (xyz)="<<  x_temp_est <<"   "<<
+             y_temp_est <<"   "<<
+             z_temp_est <<endl;
+
         cout<<"err_r (xyz)="<< pos_Sp(0) - x_temp_est <<"   "<<
             pos_Sp(1) - y_temp_est <<"   "<<
-            pos_Sp(2) - z_temp_est <<endl;
+            pos_Sp(2) - z_temp_est <<endl;*/
 
         vel_Sp = Vel_ff;
         vel_estVicon(0) = (pos_est_Vicon(0) - l_posVicon(0))/dt;
         vel_estVicon(1) = (pos_est_Vicon(1) - l_posVicon(1))/dt;
         vel_estVicon(2) = (pos_est_Vicon(2) - l_posVicon(2))/dt;
 
-        cout<<"err_v (xyz)="<< vel_Sp(0) - vel_estVicon(0) <<"  "<<
+        vel_estVicon(0) = std::min(std::max(vel_estVicon(0),-3.0f),3.0f);
+        vel_estVicon(1) = std::min(std::max(vel_estVicon(1),-3.0f),3.0f);
+        vel_estVicon(2) = std::min(std::max(vel_estVicon(2),-3.0f),3.0f);
+
+        /*cout<<"err_v (xyz)="<< vel_Sp(0) - vel_estVicon(0) <<"  "<<
             vel_Sp(1) - vel_estVicon(1) <<"  "<<
-            vel_Sp(2) - vel_estVicon(2) <<endl;
+            vel_Sp(2) - vel_estVicon(2) <<endl;*/
 
         l_posVicon(0) = x_temp_est;
         l_posVicon(1) = y_temp_est;
@@ -48,6 +60,10 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
         vel_Sp(0) =  m_pidX.pp_update(x_temp_est , x_sp) + Vel_ff(0)*0.3f; //+ff
         vel_Sp(1) =  m_pidY.pp_update(y_temp_est , y_sp) + Vel_ff(1)*0.3f;
         vel_Sp(2) =  m_pidZ.pp_update(z_temp_est , z_sp) + Vel_ff(2)*0.3f;
+
+        vel_Sp(0) = std::min(std::max(vel_Sp(0),-2.0f),2.0f);
+        vel_Sp(1) = std::min(std::max(vel_Sp(1),-2.0f),2.0f);
+        vel_Sp(2) = std::min(std::max(vel_Sp(2),-2.0f),2.0f);
 
 
         float vx_sp = vel_Sp(0);
@@ -104,8 +120,9 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
         }
 
         (*Output)(2) = 0;  //yaw rate
-        (*Output)(0) = (*Output)(0)*57.3;
-        (*Output)(1) = -(*Output)(1)*57.3;
+        (*Output)(0) = std::max(std::min((*Output)(0)*57.3f,20.0f),-20.0f);
+        (*Output)(1) = std::max(std::min(-(*Output)(1)*57.3f,20.0f),-20.0f);
+
 //        (*Output)(0) = (*Output)(0);//by xs
 
         Eigen::Vector3f temp;
@@ -120,7 +137,7 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
         thrust_force = std::min(thrust_force,max_thrust);
 //        thrust_force = 2500.0f;
         (*Output)(3) = thrust_force;
-        Cf_csv <<pos_Sp(0)<<","<<pos_Sp(1)<<"x"<<pos_Sp(2)<<"z"<<x_temp_est <<","<< y_temp_est << "," << z_temp_est << "," <<vel_estVicon(0)<< "," << vel_estVicon(1)
+        Cf_csv <<pos_Sp(0)<<","<<pos_Sp(1)<<","<<pos_Sp(2)<<","<<x_temp_est <<","<< y_temp_est << "," << z_temp_est << "," <<vel_estVicon(0)<< "," << vel_estVicon(1)
                                   << "," << vel_estVicon(2) << "," << vel_Sp(0) << "," << vel_Sp(1)<<"," << vel_Sp(2) 
                                   << "," << (*Output)(0)<<"," << (*Output)(1)<<"," << (*Output)(3)<<"\n";
 

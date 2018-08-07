@@ -195,7 +195,7 @@ public:
     , m_forceNoCache(force_no_cache)
     , m_initializedPosition(false)
     , isNotSendPIng(false)
-    , m_controller()
+    , m_controller(id)
   {
     printf("-----------------hello swarmServer --------------------\n");
     ros::NodeHandle n;
@@ -214,6 +214,7 @@ public:
     m_positionRef.setZero();
     m_velocityRef.setZero();
     m_accelerationRef.setZero();
+    m_positionRef(2)=-1;
     m_dt=0.01;
     m_commander.initSps(m_PosSetPoint,m_VelSetPoint,m_AccSetPoint);
     m_rpy(0) = -3;
@@ -578,7 +579,7 @@ public:
       m_PosSetPoint(1) =  m_initialPosition(1)+m_positionRef(1);
       m_PosSetPoint(2) = 0.0f + m_positionRef(2);
       m_PosSetPoint(3) = 0.0f; //yaw
-      std::cout<<"Pos ref:"<<m_PosSetPoint(0)<<","<<m_PosSetPoint(1)<<","<<m_PosSetPoint(2)<<std::endl;
+      //std::cout<<"Pos ref:"<<m_PosSetPoint(0)<<","<<m_PosSetPoint(1)<<","<<m_PosSetPoint(2)<<std::endl;
 //
       m_VelSetPoint(0) = 0.0f+m_velocityRef(0);
       m_VelSetPoint(1) = 0.0f+m_velocityRef(1);
@@ -881,10 +882,10 @@ public:
                     Groupcontrol(sp_states[i].id,sp_states[i]);
                 }
             }
-            std::cout<<"setpoint ouside(trpy): "<< sp_states.back().thrust <<"; "
+            /*std::cout<<"setpoint ouside(trpy): "<< sp_states.back().thrust <<"; "
                      <<sp_states.back().roll<<"; "
                      <<sp_states.back().pitch<<"; "
-                     <<sp_states.back().yaw<<std::endl<<std::endl;
+                     <<sp_states.back().yaw<<std::endl<<std::endl;*/
             m_cfbc.sendAttSps(sp_states);
         } else if (!m_sendPositionOnly) {
             m_cfbc.sendExternalPoses(states);
@@ -965,6 +966,7 @@ public:
       Eigen::Vector3f Euler;
       Eigen::Vector4f vec4ftmp;
       CrazyflieROS *cf = m_CrazyflieIdMap[id];
+      //std::cout<<"ID:"<<id<<std::endl;
       cf->m_controller.control_nonLineaire(cf->m_currentPosition,
                                                       cf->m_PosSetPoint, cf->m_VelSetPoint, cf->m_AccSetPoint, Euler,
                                                       g_dt, &vec4ftmp);
@@ -1581,8 +1583,11 @@ public:
       // Get a frame
       mocap->waitForNextFrame();
       g_dt=mocap->getTimeIncrement();
+      //mocap->waitForNextFrame();
+      //g_dt+=mocap->getTimeIncrement();
 
-      std::cout<<"g_dt:"<<g_dt<<endl;
+
+      //std::cout<<"g_dt:"<<g_dt<<endl;
 
       latencies.clear();
 
