@@ -700,6 +700,7 @@ public:
     if (writeCSVs) {
       m_outputCSVs.resize(m_cfs.size());
     }
+      m_beginPosSp=true;
   }
 
   ~CrazyflieGroup()

@@ -19,6 +19,15 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
         float x_sp = pos_Sp(0);
         float y_sp = pos_Sp(1);
         float z_sp = pos_Sp(2);
+        if(z_sp<-0.9f)
+        {
+
+            (*Output)(0)=0.0f;
+            (*Output)(1)=0.0f;
+            (*Output)(2)=0.0f;
+            (*Output)(3)=500;
+            return;
+        }
 
         /*cout<<"sp control (xyz)="<< pos_Sp(0) <<"   "<<
             pos_Sp(1)  <<"   "<<
