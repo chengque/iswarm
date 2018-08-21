@@ -127,5 +127,5 @@ dynamicsConfigurations:
     maxYawRate: 10.0
     maxRoll: 1.4
     maxPitch: 1.4
-    maxFitnessScore: 0.001
+    maxFitnessScore: 0.01
 

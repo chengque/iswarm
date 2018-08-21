@@ -82,6 +82,9 @@ int isStartTr = 0;
 long cnt = 0;
 
 float g_dt=0.01;
+
+Eigen::Vector3f gPositionRef;
+
 double degToRad(double deg) {
     return deg / 180.0 * pi();
 }
@@ -205,7 +208,7 @@ public:
     m_serviceLand = n.advertiseService(tf_prefix + "/land", &CrazyflieROS::land, this);
     m_serviceGoTo = n.advertiseService(tf_prefix + "/go_to", &CrazyflieROS::goTo, this);
     m_serviceSetGroupMask = n.advertiseService(tf_prefix + "/set_group_mask", &CrazyflieROS::setGroupMask, this);
-    m_serviceTrajectoryRef=n.advertiseService(tf_prefix + "/set_trajectory_ref", &CrazyflieROS::setTrajectoryRef, this);
+    //m_serviceTrajectoryRef=n.advertiseService(tf_prefix + "/set_trajectory_ref", &CrazyflieROS::setTrajectoryRef, this);
     m_PosSetPoint.setZero();
     m_VelSetPoint.setZero();
     m_AccSetPoint.setZero();
@@ -575,9 +578,9 @@ public:
   void getSetpoint()
   {
 //        m_commander.command_takeoff(0.02f);
-      m_PosSetPoint(0) =  m_initialPosition(0)+m_positionRef(0);
-      m_PosSetPoint(1) =  m_initialPosition(1)+m_positionRef(1);
-      m_PosSetPoint(2) = 0.0f + m_positionRef(2);
+      m_PosSetPoint(0) =  m_initialPosition(0)+gPositionRef(0);//m_positionRef(0);
+      m_PosSetPoint(1) =  m_initialPosition(1)+gPositionRef(1);//m_positionRef(1);
+      m_PosSetPoint(2) = 0.0f + gPositionRef(2);//m_positionRef(2);
       m_PosSetPoint(3) = 0.0f; //yaw
       //std::cout<<"Pos ref:"<<m_PosSetPoint(0)<<","<<m_PosSetPoint(1)<<","<<m_PosSetPoint(2)<<std::endl;
 //
@@ -837,7 +840,7 @@ public:
                 sp_states.back().roll = 0.0f;
                 sp_states.back().pitch = 0.0f;
                 sp_states.back().yaw = 0.0f;
-                sp_states.back().thrust = 500.0f;
+                sp_states.back().thrust = 600.0f;
             }
 
           m_cfs[i]->initializePositionIfNeeded(states.back().x, states.back().y, states.back().z);
@@ -868,6 +871,18 @@ public:
           ROS_WARN("No updated pose for CF %s for %f s.",
             m_cfs[i]->frame().c_str(),
             elapsedSeconds.count());
+            states.resize(states.size() + 1);
+            states.back().id = m_cfs[i]->id();
+            states.back().x = 0;
+            states.back().y = 0;
+            states.back().z = -1;
+
+            states.back().qx = 0;
+            states.back().qy = 0;
+            states.back().qz = 0;
+            states.back().qw = 0;
+
+
         }
       }
        Cf_csv << "\n";
@@ -1348,7 +1363,12 @@ public:
     // m_serviceUpdateParams = nh.advertiseService("update_params", &CrazyflieServer::updateParams, this);
     m_pubPointCloud = nh.advertise<sensor_msgs::PointCloud>("pointCloud", 1);
     m_serviceGetPosSetPoint = nh.advertiseService("getServerPosSetPoint",&CrazyflieServer::getPosSetPoint, this);
+    m_serviceTrajectoryRef=nh.advertiseService("/set_trajectory_ref", &CrazyflieServer::setTrajectoryRef, this);
+    gPositionRef.setZero();
+    gPositionRef(2)=-1;
+
     // m_subscribeVirtualInteractiveObject = nh.subscribe("virtual_interactive_object", 1, &CrazyflieServer::virtualInteractiveObjectCallback, this);
+
   }
 
   ~CrazyflieServer()
@@ -1365,6 +1385,21 @@ public:
       msg->pose.position.y,
       msg->pose.position.z);
   }
+
+
+
+    bool setTrajectoryRef(
+            crazyflie_driver::TrajectoryRef::Request& req,
+            crazyflie_driver::TrajectoryRef::Response& res)
+    {
+      //ROS_INFO("[%s] Set Group Mask", m_frame.c_str());
+
+      gPositionRef(0)=req.x;
+      gPositionRef(1)=req.y;
+      gPositionRef(2)=req.z;
+      return true;
+    }
+
 
   void run()
   {
@@ -1927,6 +1962,7 @@ private:
   ros::ServiceServer m_serviceNextPhase;
   ros::ServiceServer m_serviceUpdateParams;
   ros::ServiceServer m_serviceGetPosSetPoint;
+  ros::ServiceServer m_serviceTrajectoryRef;
 
   ros::Publisher m_pubPointCloud;
   // tf::TransformBroadcaster m_br;

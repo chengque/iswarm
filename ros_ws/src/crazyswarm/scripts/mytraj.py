@@ -14,6 +14,18 @@ if __name__ == "__main__":
 
     dt = 0.02
     tt = traj1.duration
+
+    trise=0.5
+    t=0
+    lst=datetime.datetime.now()
+    while t<trise:
+        while (datetime.datetime.now()-lst).total_seconds()<dt:
+            pass
+        lst=datetime.datetime.now()
+        t=t+dt
+        #for cf in allcfs.crazyflies:
+        allcfs.setTrajectoryRef([0, 0, -1, 0, 0, 0, 0, 0, 0]);
+
     t = 0
 
     trise=0.1
@@ -23,8 +35,8 @@ if __name__ == "__main__":
             pass
         lst=datetime.datetime.now()
         t=t+dt
-        for cf in allcfs.crazyflies:
-            cf.setTrajectoryRef([0, 0, t*10-1, 0, 0, 0, 0, 0, 0]);
+        #for cf in allcfs.crazyflies:
+        allcfs.setTrajectoryRef([0, 0, t*10-1, 0, 0, 0, 0, 0, 0]);
 
     trise=1
     t=0
@@ -35,8 +47,8 @@ if __name__ == "__main__":
             pass
         lst=datetime.datetime.now()
         t=t+dt
-        for cf in allcfs.crazyflies:
-            cf.setTrajectoryRef([0, 0, t/2, 0, 0, 0, 0, 0, 0]);
+        #for cf in allcfs.crazyflies:
+        allcfs.setTrajectoryRef([0, 0, t/2, 0, 0, 0, 0, 0, 0]);
 
     timeHelper.sleep(5)
 
@@ -51,8 +63,8 @@ if __name__ == "__main__":
         traj_tmp = [pos[0], pos[1], 0.5,  0, 0, 0, 0, 0, 0]
     	print t
     	print traj_tmp
-    	for cf in allcfs.crazyflies:
-        	cf.setTrajectoryRef(traj_tmp);
+    	#for cf in allcfs.crazyflies:
+        allcfs.setTrajectoryRef(traj_tmp);
         while (datetime.datetime.now()-lst).total_seconds()<dt:
             pass
         lst=datetime.datetime.now()
@@ -69,21 +81,21 @@ if __name__ == "__main__":
     	print t+tt
         print t
     	print traj_tmp
-    	for cf in allcfs.crazyflies:
-        	cf.setTrajectoryRef(traj_tmp);
+    	#for cf in allcfs.crazyflies:
+        allcfs.setTrajectoryRef(traj_tmp);
         while (datetime.datetime.now()-lst).total_seconds()<dt:
             pass
         lst=datetime.datetime.now()
         t=t+dt/2
 
-
-    for cf in allcfs.crazyflies:
-        cf.setTrajectoryRef([0, 0, 0, 0, 0, 0, 0, 0, 0]);
-
     timeHelper.sleep(2)
+    #for cf in allcfs.crazyflies:
+    allcfs.setTrajectoryRef([0, 0, 0, 0, 0, 0, 0, 0, 0]);
 
-    for cf in allcfs.crazyflies:
-        cf.setTrajectoryRef([0, 0, -1, 0, 0, 0, 0, 0, 0]);
+    timeHelper.sleep(0.8)
+
+    #for cf in allcfs.crazyflies:
+    allcfs.setTrajectoryRef([0, 0, -1, 0, 0, 0, 0, 0, 0]);
     
     time.sleep(100)
 

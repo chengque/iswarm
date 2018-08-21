@@ -28,6 +28,17 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
             (*Output)(3)=500;
             return;
         }
+        if(z_temp_est<-0.1f)
+        {
+            (*Output)(0)=0.0f;
+            (*Output)(1)=0.0f;
+            (*Output)(2)=0.0f;
+            (*Output)(3)=ml_control(2)-100;
+            ml_control(0)=(*Output)(0);
+            ml_control(1)=(*Output)(1);
+            ml_control(2)=(*Output)(3);
+            return;
+        }
 
         /*cout<<"sp control (xyz)="<< pos_Sp(0) <<"   "<<
             pos_Sp(1)  <<"   "<<
@@ -146,6 +157,40 @@ void Controller::control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen
         thrust_force = std::min(thrust_force,max_thrust);
 //        thrust_force = 2500.0f;
         (*Output)(3) = thrust_force;
+        if((*Output)(0)-ml_control(0)>0.5f)
+        {
+            (*Output)(0)=ml_control(0)+0.5f;
+        }
+        if((*Output)(0)-ml_control(0)<-0.5f)
+        {
+            (*Output)(0)=ml_control(0)-0.5f;
+        }
+
+        if((*Output)(1)-ml_control(1)>0.5f)
+        {
+            (*Output)(1)=ml_control(1)+0.5f;
+        }
+        if((*Output)(1)-ml_control(1)<-0.5f)
+        {
+            (*Output)(1)=ml_control(1)-0.5f;
+        }
+
+
+
+        if(pos_Sp(2)<0.1)
+        {
+
+            (*Output)(0)=0.0f;
+            (*Output)(1)=0.0f;
+            (*Output)(2)=0.0f;
+
+        }
+
+
+        ml_control(0)=(*Output)(0);
+        ml_control(1)=(*Output)(1);
+        ml_control(2)=(*Output)(3);
+
         Cf_csv <<pos_Sp(0)<<","<<pos_Sp(1)<<","<<pos_Sp(2)<<","<<x_temp_est <<","<< y_temp_est << "," << z_temp_est << "," <<vel_estVicon(0)<< "," << vel_estVicon(1)
                                   << "," << vel_estVicon(2) << "," << vel_Sp(0) << "," << vel_Sp(1)<<"," << vel_Sp(2) 
                                   << "," << (*Output)(0)<<"," << (*Output)(1)<<"," << (*Output)(3)<<"\n";

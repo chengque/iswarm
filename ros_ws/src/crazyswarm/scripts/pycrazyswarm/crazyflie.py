@@ -56,8 +56,8 @@ class Crazyflie:
         rospy.wait_for_service(prefix + "/update_params")
         self.updateParamsService = rospy.ServiceProxy(prefix + "/update_params", UpdateParams)
 
-        rospy.wait_for_service(prefix + "/set_trajectory_ref")
-        self.trajectoryRefService = rospy.ServiceProxy(prefix + "/set_trajectory_ref", TrajectoryRef)
+        #rospy.wait_for_service(prefix + "/set_trajectory_ref")
+        #self.trajectoryRefService = rospy.ServiceProxy(prefix + "/set_trajectory_ref", TrajectoryRef)
 
 
     def setGroupMask(self, groupMask):
@@ -108,19 +108,7 @@ class Crazyflie:
             rospy.set_param(self.prefix + "/" + name, value)
         self.updateParamsService(params.keys())
 
-    def setTrajectoryRef(self, refTrj):
-        trj=TrajectoryRefRequest()
-        trj.x=refTrj[0]
-        trj.y=refTrj[1]
-        trj.z=refTrj[2]
-        trj.vx=refTrj[3]
-        trj.vy=refTrj[4]
-        trj.vz=refTrj[5]
-        trj.ax=refTrj[6]
-        trj.ay=refTrj[7]
-        trj.az=refTrj[8]
-        self.trajectoryRefService(trj)
-        print "cf "+str(self.id)+" set trajecotry"
+
 
 
 class CrazyflieServer:
@@ -142,6 +130,8 @@ class CrazyflieServer:
         self.startTrajectoryService = rospy.ServiceProxy("/start_trajectory", StartTrajectory)
         # rospy.wait_for_service("/update_params")
         # self.updateParamsService = rospy.ServiceProxy("/update_params", UpdateParams)
+        rospy.wait_for_service("/set_trajectory_ref")
+        self.trajectoryRefService = rospy.ServiceProxy("/set_trajectory_ref", TrajectoryRef)
 
         print "okk"
 
@@ -181,6 +171,21 @@ class CrazyflieServer:
 
     def startTrajectory(self, trajectoryId, timescale = 1.0, reverse = False, relative = True, groupMask = 0):
         self.startTrajectoryService(groupMask, trajectoryId, timescale, reverse, relative)
+
+
+    def setTrajectoryRef(self, refTrj):
+        trj=TrajectoryRefRequest()
+        trj.x=refTrj[0]
+        trj.y=refTrj[1]
+        trj.z=refTrj[2]
+        trj.vx=refTrj[3]
+        trj.vy=refTrj[4]
+        trj.vz=refTrj[5]
+        trj.ax=refTrj[6]
+        trj.ay=refTrj[7]
+        trj.az=refTrj[8]
+        self.trajectoryRefService(trj)
+        #print "cf "+str(self.id)+" set trajecotry"
 
     # def setParam(self, name, value, group = 0):
     #     rospy.set_param("/cfgroup" + str(group) + "/" + name, value)

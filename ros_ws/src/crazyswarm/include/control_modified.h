@@ -14,7 +14,7 @@ public:
 	, m_group_index(0)
 	,m_pidX(500.0, 0.8, 10.0, 3.0, 0.0, -5e4, 5e4, -30, 30) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
 	,m_pidY(500.0, 0.8, 10.0, 3.0, 0.0, -5e4, 5e4, -30, 30)//kp 22 kd 1.8 ki 2.0 kpp 7	//, m_resFnameRoot("/home/walt/catkin_ws/src/crazyflie_ros-first_trails/easyfly/resultat/vehicle0/")
-	,m_pidZ(800.0, 1.65, 50, 2.0, 0.0, -5e4, 5e4, -1000, 1000)//kpp 3 170
+	,m_pidZ(3000.0, 1.65, 100, 2.0, 0.0, -5e4, 5e4, -5000, 5000)//kpp 3 170
 //            ,m_pidX(10.0, 0.5, 1, 200, 0.0, -1e6, 1e6, -3, 3) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
 //            ,m_pidY(10.0, 0.5, 1, 200, 0.0, -1e6, 1e6, -3, 3)//kp 22 kd 1.8 ki 2.0 kpp 7
 //            ,m_pidZ(5.0, 1.65, 5.0, 220.0, 0.0, -1e6, 1e6, -2, 2)//kpp 3 170
@@ -51,6 +51,7 @@ public:
 
 	 RPY_sp.setZero();
 	 RPY_des.setZero();
+	 ml_control.setZero();
 	 m_pidX.reset();
 	 m_pidY.reset();
 	 m_pidZ.reset();
@@ -87,7 +88,8 @@ public:
 	std::ofstream Cf_csv;
 protected:
 	//att:
-	Eigen::Vector3f  e_R;
+	Eigen::Vector3f e_R;
+	Eigen::Vector4f ml_control;
 	Eigen::Vector3f _Zb_des, _Xc_des, _Yb_des, _Xb_des, Thrust_des;//, F_des
 	std::vector<Eigen::MatrixXf> PID_v;
 	Eigen::Vector3f RPY_sp, RPY_des;
