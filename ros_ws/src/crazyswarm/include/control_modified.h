@@ -12,9 +12,9 @@ public:
 	Controller(int id)
 	: loop_record(0)
 	, m_group_index(0)
-	,m_pidX(500.0, 0.8, 10.0, 3.0, 0.0, -5e4, 5e4, -30, 30) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
-	,m_pidY(500.0, 0.8, 10.0, 3.0, 0.0, -5e4, 5e4, -30, 30)//kp 22 kd 1.8 ki 2.0 kpp 7	//, m_resFnameRoot("/home/walt/catkin_ws/src/crazyflie_ros-first_trails/easyfly/resultat/vehicle0/")
-	,m_pidZ(3000.0, 1.65, 100, 2.0, 0.0, -5e4, 5e4, -5000, 5000)//kpp 3 170
+	,m_pidX(2.80, 0.08, 0.100, 3.0, 0.0, -5e4, 5e4, -3, 3) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
+	,m_pidY(2.80, 0.08, 0.10, 3.0, 0.0, -5e4, 5e4, -3, 3)//kp 22 kd 1.8 ki 2.0 kpp 7	//, m_resFnameRoot("/home/walt/catkin_ws/src/crazyflie_ros-first_trails/easyfly/resultat/vehicle0/")
+	,m_pidZ(4.0, 0.01, 0.20, 2.0, 0.0, -5e4, 5e4, -3, 3)//kpp 3 170
 //            ,m_pidX(10.0, 0.5, 1, 200, 0.0, -1e6, 1e6, -3, 3) //kp, kd, ki, kpp, ff, minOutput, maxOutput, integratorMin, integratorMax;
 //            ,m_pidY(10.0, 0.5, 1, 200, 0.0, -1e6, 1e6, -3, 3)//kp 22 kd 1.8 ki 2.0 kpp 7
 //            ,m_pidZ(5.0, 1.65, 5.0, 220.0, 0.0, -1e6, 1e6, -2, 2)//kpp 3 170
@@ -55,12 +55,13 @@ public:
 	 m_pidX.reset();
 	 m_pidY.reset();
 	 m_pidZ.reset();
+	 time=0;
 	 
 	 printf("hello!! control.h\n");
 	 char str_csv[50] ;
 	 sprintf(str_csv,"/home/chengque/workspace/Cfs%d.csv",id);
 	 Cf_csv.open(str_csv);printf("opened csv\n");
-	 Cf_csv  <<"sx,sy,sz,x,y,z,vx,vy,vz,svx,svy,svz,ox,oy,oz\n";
+	 Cf_csv  <<"t,sx,sy,sz,x,y,z,vx,vy,vz,svx,svy,svz,ox,oy,oz,ex,ey,ez\n";
 	};
 
 	const float w_Vicon = 1.0f;
@@ -73,7 +74,7 @@ public:
     const int num_redording = 4096;
 //    const float max_thrust = 0.5827*1.3;
     const float amplifier=13200;
-	const float max_thrust = 6000;//amplifier*GRAVITY*MAX_THRUST/1000000.0f;
+	const float max_thrust = 6500;//amplifier*GRAVITY*MAX_THRUST/1000000.0f;
 
 	const float KPxy = 0.06, KVxy = 0.02;//added by xs
 	const float KPz = 0.18, KVz = 0.06;
@@ -81,6 +82,7 @@ public:
 	float err_vx, err_vy, err_vz;
 
 	float Pitch_Sp;
+	float time;
 	float Roll_Sp;
 	char m_resFnameRoot[150];
 	int loop_record;
@@ -99,7 +101,7 @@ protected:
 
 	float l_yawSp, yaw_deriv;
 
-	Eigen::Vector3f l_posVicon, pos_Sp, l_possp, pos_estIMU, l_velsp;//, lacc_est_IMU
+	Eigen::Vector3f pos_Sp, l_possp, pos_estIMU, l_velsp;//, lacc_est_IMU
 	PID m_pidX;
 	PID m_pidY;
 	PID m_pidZ;
@@ -114,6 +116,7 @@ protected:
 	}
 
 public:
+    Eigen::Vector3f l_posVicon;
     void control_nonLineaire(const Eigen::Vector3f& pos_est_Vicon, Eigen::Vector4f& Sp, Eigen::Vector3f& Vel_ff,
                                   Eigen::Vector3f& acc_Sp, Eigen::Vector3f& Euler, float dt, Eigen::Vector4f* Output);
 	// {

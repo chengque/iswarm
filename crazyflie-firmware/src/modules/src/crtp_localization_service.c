@@ -79,9 +79,9 @@ typedef struct {
 
 typedef struct {
     uint8_t id; // last 8 bit of the Crazyflie address
-    int16_t roll; // deg
-    int16_t pitch; // deg
-//    int16_t yaw; // deg
+    int8_t roll; // deg
+    int8_t pitch; // deg
+    int8_t yaw; // deg
     int16_t thrust;
 } __attribute__((packed)) attSetpointPackedItem;
 
@@ -221,10 +221,10 @@ static void attSetpointPackedHandler(CRTPPacket* pk)
   uint8_t numItems = pk->size / sizeof(attSetpointPackedItem);
   for (uint8_t i = 0; i < numItems; ++i) {
     const attSetpointPackedItem* item = (const attSetpointPackedItem*)&pk->data[i * sizeof(attSetpointPackedItem)];
-    if (item->id == my_id) {
+    if ((item->id == my_id) && (item->yaw==0x55)) {
       struct CrtpAttSp attSp;
-      attSp.roll = item->roll/10.0f;
-      attSp.pitch = item->pitch/10.0f;
+      attSp.roll = item->roll/5.0f;
+      attSp.pitch = (item->pitch)/5.0f;
       attSp.thrust = item->thrust*10.0f;
 //      attSp.yaw = item->yaw;
 

@@ -254,7 +254,7 @@ void ObjectTracker::runICP(std::chrono::high_resolution_clock::time_point stamp,
 
 
   // // Set the maximum number of iterations (criterion 1)
-  icp.setMaximumIterations(5);
+  icp.setMaximumIterations(10);
   // // Set the transformation epsilon (criterion 2)
   // icp.setTransformationEpsilon(1e-8);
   // // Set the euclidean distance difference epsilon (criterion 3)

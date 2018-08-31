@@ -155,8 +155,8 @@ endif()
 
 ## Declare a cpp executable
 add_executable(crazyswarm_server
-  src/crazyswarm_server.cpp
-)
+  src/crazyswarm_server.cpp)
+#        include/cftracker.cpp include/cftracker.h)
 target_link_libraries(crazyswarm_server
   ${catkin_LIBRARIES}
   controller

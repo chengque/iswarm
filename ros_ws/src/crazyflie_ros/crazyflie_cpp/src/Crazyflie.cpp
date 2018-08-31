@@ -1403,9 +1403,12 @@ void CrazyflieBroadcaster::sendAttSps(const std::vector<AttSetPts>& data)
   for (size_t i = 0; i < data.size(); ++i) {
     size_t j = i / 4;
     requests[j].attitutes[i%4].id = data[i].id;
-    requests[j].attitutes[i%4].roll = data[i].roll * 10;
-    requests[j].attitutes[i%4].pitch = data[i].pitch * 10;
-//    requests[j].attitutes[i%4].yaw = data[i].yaw * 10;
+    requests[j].attitutes[i%4].roll = (int8_t)(data[i].roll) * 10;
+    //requests[j].attitutes[i%4].pitch=data[i].id;
+    //requests[j].attitutes[i%4].pitch=requests[j].attitutes[i%4].pitch<<8;
+
+    requests[j].attitutes[i%4].pitch =  ((int8_t)(data[i].pitch) * 10);
+    requests[j].attitutes[i%4].yaw = 0x55;
     requests[j].attitutes[i%4].thrust = data[i].thrust;
   }
 //  std::vector<crtpCommanderAttSetPointRequest> requests(ceil(data.size()/2.0));

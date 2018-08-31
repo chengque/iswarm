@@ -38,7 +38,7 @@ if __name__ == "__main__":
         #for cf in allcfs.crazyflies:
         allcfs.setTrajectoryRef([0, 0, t*10-1, 0, 0, 0, 0, 0, 0]);
 
-    trise=1
+    trise=2
     t=0
 
     lst=datetime.datetime.now()
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     	vel = traj1.eval(t).vel
     	acc = traj1.eval(t).acc
     	#traj_tmp = [pos[0], pos[1], pos[2],  vel[0], vel[1], vel[2], acc[0], acc[1], acc[2]]
-        traj_tmp = [pos[0], pos[1], 0.5,  0, 0, 0, 0, 0, 0]
+        traj_tmp = [pos[0], pos[1], 1,  0, 0, 0, acc[0], acc[1], 0]
     	print t
     	print traj_tmp
     	#for cf in allcfs.crazyflies:
@@ -68,7 +68,7 @@ if __name__ == "__main__":
         while (datetime.datetime.now()-lst).total_seconds()<dt:
             pass
         lst=datetime.datetime.now()
-        t=t+dt/2
+        t=t+dt/3
 
     lst=datetime.datetime.now()
     t=0
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     	vel = traj1.eval(t).vel
     	acc = traj1.eval(t).acc
     	#traj_tmp = [-pos[0], -pos[1], pos[2],  -vel[0], -vel[1], vel[2], -acc[0], -acc[1], acc[2]]
-        traj_tmp = [-pos[0], -pos[1], 0.5,  0, 0, 0, 0, 0, 0]
+        traj_tmp = [-pos[0], -pos[1], 1,  0, 0, 0, acc[0], acc[1], 0]
     	print t+tt
         print t
     	print traj_tmp
@@ -86,13 +86,13 @@ if __name__ == "__main__":
         while (datetime.datetime.now()-lst).total_seconds()<dt:
             pass
         lst=datetime.datetime.now()
-        t=t+dt/2
+        t=t+dt/3
 
     timeHelper.sleep(2)
     #for cf in allcfs.crazyflies:
-    allcfs.setTrajectoryRef([0, 0, 0, 0, 0, 0, 0, 0, 0]);
+    allcfs.setTrajectoryRef([0, 0, 0.2, 0, 0, 0, 0, 0, 0]);
 
-    timeHelper.sleep(0.8)
+    timeHelper.sleep(1)
 
     #for cf in allcfs.crazyflies:
     allcfs.setTrajectoryRef([0, 0, -1, 0, 0, 0, 0, 0, 0]);

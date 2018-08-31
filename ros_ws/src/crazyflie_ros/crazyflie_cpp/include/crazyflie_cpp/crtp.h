@@ -892,9 +892,9 @@ struct crtpAttSetPointPacked
     const crtp header;
     struct {
         uint8_t id;
-        int16_t roll; // deg
-        int16_t pitch; // deg
-//        int16_t yaw; // deg
+        int8_t roll; // deg
+        int8_t pitch; // deg
+        int8_t yaw; // deg
         int16_t thrust;
     } __attribute__((packed)) attitutes[4];
 }  __attribute__((packed));

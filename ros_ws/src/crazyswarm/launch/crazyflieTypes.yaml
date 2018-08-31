@@ -17,7 +17,7 @@ crazyflieTypes:
         kw_z: 12000 # 30000  # d for yaw
         ki_m_z: 500 #0 #20000     # i for yaw
         i_range_m_z: 1500 # i range for yaw
-        kd_omega_rp: 200 # roll and pitch angular velocity d gain
+        kd_omega_rp: 400 # roll and pitch angular velocity d gain
         kp_z: 1.25
         kd_z: 0.4
         ki_z: 0.05
@@ -112,20 +112,21 @@ markerConfigurations:
     numPoints: 4
     offset: [0.0, 0.0, 0.0]
     points:
-      "0": [-0.07,-0.07,0.0]
-      "1": [-0.07,0.07,0.0]
-      "2": [0.048,0.048,0.0]
-      "3": [0.048,-0.048,0.0]
+      "0": [-0.026,-0.065,0.0]
+      "1": [-0.026,0.065,0.0]
+      "2": [0.026,0.046,0.0]
+      "3": [0.026,-0.046,0.0]
+      #"4": [0.026, 0.0,0.0]
 numDynamicsConfigurations: 1
 dynamicsConfigurations:
   "0":
-    maxXVelocity: 8.0
-    maxYVelocity: 8.0
-    maxZVelocity: 10.0
-    maxPitchRate: 20.0
-    maxRollRate: 20.0
-    maxYawRate: 10.0
+    maxXVelocity: 5.0
+    maxYVelocity: 5.0
+    maxZVelocity: 5.0
+    maxPitchRate: 50.0
+    maxRollRate: 50.0
+    maxYawRate: 50.0
     maxRoll: 1.4
     maxPitch: 1.4
-    maxFitnessScore: 0.01
+    maxFitnessScore: 0.002
 

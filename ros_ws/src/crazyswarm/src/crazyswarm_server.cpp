@@ -62,6 +62,8 @@
 #include <wordexp.h> // tilde expansion
 
 #include <stdio.h>
+
+#define DYN_ERR 0.02
 /*
 Threading
  * There are 2N+1 threads, where N is the number of groups (== number of unique channels)
@@ -82,6 +84,8 @@ int isStartTr = 0;
 long cnt = 0;
 
 float g_dt=0.01;
+
+
 
 Eigen::Vector3f gPositionRef;
 
@@ -213,10 +217,12 @@ public:
     m_VelSetPoint.setZero();
     m_AccSetPoint.setZero();
     m_currentPosition.setZero();
+    m_lastPosition.setZero();
     m_initialPosition.setZero();
     m_positionRef.setZero();
     m_velocityRef.setZero();
     m_accelerationRef.setZero();
+    Euler.setZero();
     m_positionRef(2)=-1;
     m_dt=0.01;
     m_commander.initSps(m_PosSetPoint,m_VelSetPoint,m_AccSetPoint);
@@ -315,6 +321,7 @@ public:
         ROS_ERROR("Could not find param %s/%s", group.c_str(), name.c_str());
       }
     }
+    std::cout<<"CF "<<m_id<<" Send paramters."<<std::endl;
     m_cf.setRequestedParams();
     return true;
   }
@@ -422,6 +429,13 @@ public:
       m_initialPosition(0)=x;
       m_initialPosition(1)=y;
       m_initialPosition(2)=z;
+      m_lastPosition(0)=x;
+      m_lastPosition(1)=y;
+      m_lastPosition(2)=z;
+      m_controller.l_posVicon(0)=x;
+      m_controller.l_posVicon(1)=y;
+      m_controller.l_posVicon(2)=z;
+
       std::cout<<"Initial position:"<<x<<y<<z<<std::endl;
   }
   void run(
@@ -601,6 +615,16 @@ public:
       m_currentPosition(2) = z;
   }
 
+    void giveCurrentPos(pcl::PointCloud<pcl::PointXYZ>::Ptr pmarkers)
+    {
+      Eigen::Vector3f temp;
+      temp=m_lastPosition;
+      for(int i=0;i<pmarkers->size();i++)
+       {
+
+       }
+    }
+
 
 private:
   Crazyflie m_cf;
@@ -633,12 +657,13 @@ private:
   float m_dt;
   //added by yhz
 public:
-    Eigen::Vector3f m_currentPosition,m_VelSetPoint,m_AccSetPoint;
+    Eigen::Vector3f m_currentPosition,m_lastPosition,m_VelSetPoint,m_AccSetPoint;
     Eigen::Vector3f m_initialPosition;
     Eigen::Vector3f m_positionRef;
     Eigen::Vector3f m_velocityRef;
     Eigen::Vector3f m_accelerationRef;
     Eigen::Vector4f m_PosSetPoint;
+    Eigen::Vector3f Euler;
     Controller m_controller;
     Commander m_commander;
 };
@@ -871,7 +896,7 @@ public:
           ROS_WARN("No updated pose for CF %s for %f s.",
             m_cfs[i]->frame().c_str(),
             elapsedSeconds.count());
-            states.resize(states.size() + 1);
+            /*states.resize(states.size() + 1);
             states.back().id = m_cfs[i]->id();
             states.back().x = 0;
             states.back().y = 0;
@@ -880,7 +905,7 @@ public:
             states.back().qx = 0;
             states.back().qy = 0;
             states.back().qz = 0;
-            states.back().qw = 0;
+            states.back().qw = 0;*/
 
 
         }
@@ -893,7 +918,9 @@ public:
             if(m_beginPosSp)//主要过程
             {
                 for(int i=0;i<sp_states.size();++i){
-                    getGroupCurPos(states[i].id,states[i].x,states[i].y,states[i].z);
+                    //getGroupCurPos(states[i].id,states[i].x,states[i].y,states[i].z);
+                    //getGroupCurPos(states[i].id,m_pMarkers);
+                    getGroupCurPos(states[i]);
                     getPositionSetPoint();
                     Groupcontrol(sp_states[i].id,sp_states[i]);
                 }
@@ -984,7 +1011,7 @@ public:
       CrazyflieROS *cf = m_CrazyflieIdMap[id];
       //std::cout<<"ID:"<<id<<std::endl;
       cf->m_controller.control_nonLineaire(cf->m_currentPosition,
-                                                      cf->m_PosSetPoint, cf->m_VelSetPoint, cf->m_AccSetPoint, Euler,
+                                                      cf->m_PosSetPoint, cf->m_VelSetPoint, cf->m_AccSetPoint, cf->Euler,
                                                       g_dt, &vec4ftmp);
       sp_state.roll = vec4ftmp(0);
       sp_state.pitch = vec4ftmp(1);
@@ -996,6 +1023,24 @@ public:
     {
         CrazyflieROS *cf = m_CrazyflieIdMap[id];
         cf->giveCurrentPos(x,y,z);
+    }
+
+
+    void getGroupCurPos(CrazyflieBroadcaster::externalPose state)
+    {
+        CrazyflieROS *cf = m_CrazyflieIdMap[state.id];
+        cf->giveCurrentPos(state.x,state.y,state.z);
+        Eigen::Quaternionf q(state.qw,state.qx,state.qy,state.qz);
+        auto rpy = q.toRotationMatrix().eulerAngles(0, 1, 2);
+        cf->Euler(0)=rpy(0);
+        cf->Euler(1)=rpy(1);
+        cf->Euler(2)=rpy(2);
+    }
+
+    void getGroupCurPos(uint8_t id, pcl::PointCloud<pcl::PointXYZ>::Ptr pmarkers)
+    {
+        CrazyflieROS *cf = m_CrazyflieIdMap[id];
+        cf->giveCurrentPos(pmarkers);
     }
     /**
      * end
@@ -1146,7 +1191,7 @@ private:
         if (ch == channel) {
         XmlRpc::XmlRpcValue pos = crazyflie["initialPosition"];
         ROS_ASSERT(pos.getType() == XmlRpc::XmlRpcValue::TypeArray);
-        std::cout<<"------ Read Object successfully 1--------\n"<<std::endl;
+        std::cout<<"CF"<<id<<"------ Read Object successfully 1--------\n"<<std::endl;
 
         std::vector<double> posVec(3);
         for (int32_t j = 0; j < pos.size(); ++j) {
