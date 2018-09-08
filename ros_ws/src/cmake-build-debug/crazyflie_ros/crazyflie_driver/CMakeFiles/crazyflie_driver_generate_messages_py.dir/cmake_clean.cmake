@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/crazyflie_driver_generate_messages_py"
   "../../devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_crtpPacket.py"
   "../../devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_Position.py"
+  "../../devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_state_tg.py"
   "../../devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_Hover.py"
   "../../devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_LogBlock.py"
   "../../devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_FullState.py"

@@ -1,5 +1,21 @@
 crazyflies:
 - channel: 80
+  id: 3
+  initialPosition: [-0.21, -0.626822, 0.0413574]
+  type: default
+- channel: 80
+  id: 5
+  initialPosition: [-0.88, -0.609, 0.0413574]
+  type: default
+- channel: 80
+  id: 6
+  initialPosition: [0.88, -0.03, 0.0338828]
+  type: default
+- channel: 80
+  id: 7
+  initialPosition: [-1.32, 0.00445356, 0.0338828]
+  type: default
+- channel: 80
   id: 10
   initialPosition: [0.47, 0.6, 0.023]
   type: default
@@ -8,8 +24,8 @@ crazyflies:
   initialPosition: [-0.87, 0.57115, 0.022]
   type: default
 - channel: 80
-  id: 86
-  initialPosition: [0.88, -0.03, 0.0338828]
+  id: 81
+  initialPosition: [0.47, -0.635, 0.0338828]
   type: default
 - channel: 80
   id: 91

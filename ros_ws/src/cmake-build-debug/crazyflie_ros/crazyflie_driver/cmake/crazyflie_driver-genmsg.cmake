@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "crazyflie_driver: 7 messages, 13 services")
+message(STATUS "crazyflie_driver: 8 messages, 13 services")
 
 set(MSG_I_FLAGS "-Icrazyflie_driver:/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg")
 
@@ -53,6 +53,11 @@ add_custom_target(_crazyflie_driver_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/StartTrajectory.srv" NAME_WE)
 add_custom_target(_crazyflie_driver_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "crazyflie_driver" "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/StartTrajectory.srv" ""
+)
+
+get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg" NAME_WE)
+add_custom_target(_crazyflie_driver_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "crazyflie_driver" "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg" "std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Hover.msg" NAME_WE)
@@ -129,6 +134,12 @@ _generate_msg_cpp(crazyflie_driver
 )
 _generate_msg_cpp(crazyflie_driver
   "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Position.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/crazyflie_driver
+)
+_generate_msg_cpp(crazyflie_driver
+  "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/crazyflie_driver
@@ -272,6 +283,8 @@ get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazysw
 add_dependencies(crazyflie_driver_generate_messages_cpp _crazyflie_driver_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/StartTrajectory.srv" NAME_WE)
 add_dependencies(crazyflie_driver_generate_messages_cpp _crazyflie_driver_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg" NAME_WE)
+add_dependencies(crazyflie_driver_generate_messages_cpp _crazyflie_driver_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Hover.msg" NAME_WE)
 add_dependencies(crazyflie_driver_generate_messages_cpp _crazyflie_driver_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/Stop.srv" NAME_WE)
@@ -314,6 +327,12 @@ _generate_msg_lisp(crazyflie_driver
 )
 _generate_msg_lisp(crazyflie_driver
   "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Position.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/crazyflie_driver
+)
+_generate_msg_lisp(crazyflie_driver
+  "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/crazyflie_driver
@@ -457,6 +476,8 @@ get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazysw
 add_dependencies(crazyflie_driver_generate_messages_lisp _crazyflie_driver_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/StartTrajectory.srv" NAME_WE)
 add_dependencies(crazyflie_driver_generate_messages_lisp _crazyflie_driver_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg" NAME_WE)
+add_dependencies(crazyflie_driver_generate_messages_lisp _crazyflie_driver_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Hover.msg" NAME_WE)
 add_dependencies(crazyflie_driver_generate_messages_lisp _crazyflie_driver_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/Stop.srv" NAME_WE)
@@ -499,6 +520,12 @@ _generate_msg_py(crazyflie_driver
 )
 _generate_msg_py(crazyflie_driver
   "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Position.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/crazyflie_driver
+)
+_generate_msg_py(crazyflie_driver
+  "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/crazyflie_driver
@@ -641,6 +668,8 @@ add_dependencies(crazyflie_driver_generate_messages_py _crazyflie_driver_generat
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/SetGroupMask.srv" NAME_WE)
 add_dependencies(crazyflie_driver_generate_messages_py _crazyflie_driver_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/srv/StartTrajectory.srv" NAME_WE)
+add_dependencies(crazyflie_driver_generate_messages_py _crazyflie_driver_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg" NAME_WE)
 add_dependencies(crazyflie_driver_generate_messages_py _crazyflie_driver_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Hover.msg" NAME_WE)
 add_dependencies(crazyflie_driver_generate_messages_py _crazyflie_driver_generate_messages_check_deps_${_filename})

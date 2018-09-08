@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/crazyflie_driver_generate_messages_lisp"
   "../../devel/share/common-lisp/ros/crazyflie_driver/msg/crtpPacket.lisp"
   "../../devel/share/common-lisp/ros/crazyflie_driver/msg/Position.lisp"
+  "../../devel/share/common-lisp/ros/crazyflie_driver/msg/state_tg.lisp"
   "../../devel/share/common-lisp/ros/crazyflie_driver/msg/Hover.lisp"
   "../../devel/share/common-lisp/ros/crazyflie_driver/msg/LogBlock.lisp"
   "../../devel/share/common-lisp/ros/crazyflie_driver/msg/FullState.lisp"

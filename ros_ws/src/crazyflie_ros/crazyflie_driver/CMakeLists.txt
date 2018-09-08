@@ -53,6 +53,7 @@ add_message_files(
   TrajectoryPolynomialPiece.msg
   crtpPacket.msg
   Hover.msg
+  state_tg.msg
   Position.msg
 )
 

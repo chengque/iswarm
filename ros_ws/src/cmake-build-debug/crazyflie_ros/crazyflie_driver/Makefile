@@ -68,18 +68,6 @@ install/strip/fast: preinstall/fast
 	/home/chengque/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/chengque/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/chengque/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -123,6 +111,18 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/chengque/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/chengque/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -243,19 +243,19 @@ crazyflie_driver_generate_messages_lisp/fast:
 .PHONY : crazyflie_driver_generate_messages_lisp/fast
 
 # Convenience name for target.
-crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/rule:
-	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/rule
-.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/rule
+crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/rule:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/rule
+.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-_crazyflie_driver_generate_messages_check_deps_Hover: crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/rule
+crazyflie_driver_generate_messages_cpp: crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/rule
 
-.PHONY : _crazyflie_driver_generate_messages_check_deps_Hover
+.PHONY : crazyflie_driver_generate_messages_cpp
 
 # fast build rule for target.
-_crazyflie_driver_generate_messages_check_deps_Hover/fast:
-	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/build
-.PHONY : _crazyflie_driver_generate_messages_check_deps_Hover/fast
+crazyflie_driver_generate_messages_cpp/fast:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/build
+.PHONY : crazyflie_driver_generate_messages_cpp/fast
 
 # Convenience name for target.
 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_SetGroupMask.dir/rule:
@@ -286,36 +286,6 @@ _crazyflie_driver_generate_messages_check_deps_Takeoff: crazyflie_ros/crazyflie_
 _crazyflie_driver_generate_messages_check_deps_Takeoff/fast:
 	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Takeoff.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Takeoff.dir/build
 .PHONY : _crazyflie_driver_generate_messages_check_deps_Takeoff/fast
-
-# Convenience name for target.
-crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/rule:
-	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/rule
-.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/rule
-
-# Convenience name for target.
-_crazyflie_driver_generate_messages_check_deps_Land: crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/rule
-
-.PHONY : _crazyflie_driver_generate_messages_check_deps_Land
-
-# fast build rule for target.
-_crazyflie_driver_generate_messages_check_deps_Land/fast:
-	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/build
-.PHONY : _crazyflie_driver_generate_messages_check_deps_Land/fast
-
-# Convenience name for target.
-crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/rule:
-	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/rule
-.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/rule
-
-# Convenience name for target.
-_crazyflie_driver_generate_messages_check_deps_crtpPacket: crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/rule
-
-.PHONY : _crazyflie_driver_generate_messages_check_deps_crtpPacket
-
-# fast build rule for target.
-_crazyflie_driver_generate_messages_check_deps_crtpPacket/fast:
-	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/build
-.PHONY : _crazyflie_driver_generate_messages_check_deps_crtpPacket/fast
 
 # Convenience name for target.
 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_AddCrazyflie.dir/rule:
@@ -408,6 +378,66 @@ crazyflie_driver_generate_messages/fast:
 .PHONY : crazyflie_driver_generate_messages/fast
 
 # Convenience name for target.
+crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/rule:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/rule
+.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/rule
+
+# Convenience name for target.
+_crazyflie_driver_generate_messages_check_deps_crtpPacket: crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/rule
+
+.PHONY : _crazyflie_driver_generate_messages_check_deps_crtpPacket
+
+# fast build rule for target.
+_crazyflie_driver_generate_messages_check_deps_crtpPacket/fast:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket.dir/build
+.PHONY : _crazyflie_driver_generate_messages_check_deps_crtpPacket/fast
+
+# Convenience name for target.
+crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/rule:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/rule
+.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/rule
+
+# Convenience name for target.
+_crazyflie_driver_generate_messages_check_deps_Land: crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/rule
+
+.PHONY : _crazyflie_driver_generate_messages_check_deps_Land
+
+# fast build rule for target.
+_crazyflie_driver_generate_messages_check_deps_Land/fast:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Land.dir/build
+.PHONY : _crazyflie_driver_generate_messages_check_deps_Land/fast
+
+# Convenience name for target.
+crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_state_tg.dir/rule:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_state_tg.dir/rule
+.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_state_tg.dir/rule
+
+# Convenience name for target.
+_crazyflie_driver_generate_messages_check_deps_state_tg: crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_state_tg.dir/rule
+
+.PHONY : _crazyflie_driver_generate_messages_check_deps_state_tg
+
+# fast build rule for target.
+_crazyflie_driver_generate_messages_check_deps_state_tg/fast:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_state_tg.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_state_tg.dir/build
+.PHONY : _crazyflie_driver_generate_messages_check_deps_state_tg/fast
+
+# Convenience name for target.
+crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/rule:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/rule
+.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/rule
+
+# Convenience name for target.
+_crazyflie_driver_generate_messages_check_deps_Hover: crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/rule
+
+.PHONY : _crazyflie_driver_generate_messages_check_deps_Hover
+
+# fast build rule for target.
+_crazyflie_driver_generate_messages_check_deps_Hover/fast:
+	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Hover.dir/build
+.PHONY : _crazyflie_driver_generate_messages_check_deps_Hover/fast
+
+# Convenience name for target.
 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Position.dir/rule:
 	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Position.dir/rule
 .PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Position.dir/rule
@@ -421,21 +451,6 @@ _crazyflie_driver_generate_messages_check_deps_Position: crazyflie_ros/crazyflie
 _crazyflie_driver_generate_messages_check_deps_Position/fast:
 	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Position.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_Position.dir/build
 .PHONY : _crazyflie_driver_generate_messages_check_deps_Position/fast
-
-# Convenience name for target.
-crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/rule:
-	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/rule
-.PHONY : crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-crazyflie_driver_generate_messages_cpp: crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/rule
-
-.PHONY : crazyflie_driver_generate_messages_cpp
-
-# fast build rule for target.
-crazyflie_driver_generate_messages_cpp/fast:
-	cd /home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/cmake-build-debug && $(MAKE) -f crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/build.make crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp.dir/build
-.PHONY : crazyflie_driver_generate_messages_cpp/fast
 
 # Convenience name for target.
 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_sendPacket.dir/rule:
@@ -663,7 +678,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
@@ -673,19 +687,21 @@ help:
 	@echo "... crazyflie_driver_generate_messages_py"
 	@echo "... crazyflie_driver_genlisp"
 	@echo "... crazyflie_driver_generate_messages_lisp"
-	@echo "... _crazyflie_driver_generate_messages_check_deps_Hover"
+	@echo "... crazyflie_driver_generate_messages_cpp"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_SetGroupMask"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_Takeoff"
-	@echo "... _crazyflie_driver_generate_messages_check_deps_Land"
-	@echo "... _crazyflie_driver_generate_messages_check_deps_crtpPacket"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_AddCrazyflie"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_LogBlock"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_RemoveCrazyflie"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_FullState"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_UploadTrajectory"
 	@echo "... crazyflie_driver_generate_messages"
+	@echo "... _crazyflie_driver_generate_messages_check_deps_crtpPacket"
+	@echo "... _crazyflie_driver_generate_messages_check_deps_Land"
+	@echo "... install/local"
+	@echo "... _crazyflie_driver_generate_messages_check_deps_state_tg"
+	@echo "... _crazyflie_driver_generate_messages_check_deps_Hover"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_Position"
-	@echo "... crazyflie_driver_generate_messages_cpp"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_sendPacket"
 	@echo "... _crazyflie_driver_generate_messages_check_deps_getPosSetPoint"
 	@echo "... crazyflie_driver_gencpp"

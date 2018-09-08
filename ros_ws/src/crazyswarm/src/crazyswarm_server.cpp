@@ -27,6 +27,7 @@
 
 #include <sensor_msgs/Joy.h>
 #include <sensor_msgs/PointCloud.h>
+#include "crazyflie_driver/state_tg.h"
 
 //#include <regex>
 #include <thread>
@@ -212,6 +213,7 @@ public:
     m_serviceLand = n.advertiseService(tf_prefix + "/land", &CrazyflieROS::land, this);
     m_serviceGoTo = n.advertiseService(tf_prefix + "/go_to", &CrazyflieROS::goTo, this);
     m_serviceSetGroupMask = n.advertiseService(tf_prefix + "/set_group_mask", &CrazyflieROS::setGroupMask, this);
+    m_traj_ref_sub = n.subscribe(tf_prefix + "/set_state", 100, &CrazyflieROS::aflie_state_traj_cb,this);
     //m_serviceTrajectoryRef=n.advertiseService(tf_prefix + "/set_trajectory_ref", &CrazyflieROS::setTrajectoryRef, this);
     m_PosSetPoint.setZero();
     m_VelSetPoint.setZero();
@@ -222,6 +224,18 @@ public:
     m_positionRef.setZero();
     m_velocityRef.setZero();
     m_accelerationRef.setZero();
+    s_tg_tmp.p_x = 0.0;
+    s_tg_tmp.p_y = 0.0;
+    s_tg_tmp.p_z = -1.0;
+    s_tg_tmp.v_x = 0.0;
+    s_tg_tmp.v_y = 0.0;
+    s_tg_tmp.v_z = 0.0;
+    s_tg_tmp.a_x = 0.0;
+    s_tg_tmp.a_y = 0.0;
+    s_tg_tmp.a_z = 0.0;
+    m_PosSetPoint(2)=-1;
+
+
     Euler.setZero();
     m_positionRef(2)=-1;
     m_dt=0.01;
@@ -438,6 +452,23 @@ public:
 
       std::cout<<"Initial position:"<<x<<y<<z<<std::endl;
   }
+
+    void aflie_state_traj_cb(const crazyflie_driver::state_tg::ConstPtr& s_tg){
+      s_tg_tmp = *s_tg;
+      m_PosSetPoint(0) = s_tg_tmp.p_x + m_initialPosition(0);
+      m_PosSetPoint(1) = s_tg_tmp.p_y + m_initialPosition(1);
+      m_PosSetPoint(2) = s_tg_tmp.p_z;
+      //m_PosSetPoint(3) = 0;
+      m_VelSetPoint(0) = s_tg_tmp.v_x;
+      m_VelSetPoint(1) = s_tg_tmp.v_y;
+      m_VelSetPoint(2) = s_tg_tmp.v_z;
+      m_AccSetPoint(0) = s_tg_tmp.a_x;
+      m_AccSetPoint(1) = s_tg_tmp.a_y;
+      m_AccSetPoint(2) = s_tg_tmp.a_z;
+      //std::cout<<"flie"<<m_id<<"set point"<<m_PosSetPoint(0)<<" "<<m_PosSetPoint(1)<<" "<<m_PosSetPoint(2)<<std::endl;
+    };
+
+
   void run(
     ros::CallbackQueue& queue)
   {
@@ -608,6 +639,17 @@ public:
 
   }
 
+
+  void getPositionSetPoint()
+    {
+      ros::spinOnce(); //added by xs
+      /*for(auto& cf : m_cfs)
+      {
+        //cf->getSetpoint();
+        cf->getSetpoint_from_topic();
+      }*/
+    }
+
   void giveCurrentPos(float x, float y, float z)
   {
       m_currentPosition(0) = x;
@@ -643,7 +685,9 @@ private:
   ros::ServiceServer m_serviceGoTo;
   ros::ServiceServer m_serviceSetGroupMask;
   ros::ServiceServer m_serviceTrajectoryRef;
+  crazyflie_driver::state_tg s_tg_tmp;
 
+  ros::Subscriber m_traj_ref_sub;
   std::vector<crazyflie_driver::LogBlock> m_logBlocks;
   std::vector<ros::Publisher> m_pubLogDataGeneric;
   std::vector<std::unique_ptr<LogBlockGeneric> > m_logBlocksGeneric;
@@ -922,6 +966,7 @@ public:
                     //getGroupCurPos(states[i].id,m_pMarkers);
                     getGroupCurPos(states[i]);
                     getPositionSetPoint();
+
                     Groupcontrol(sp_states[i].id,sp_states[i]);
                 }
             }
@@ -999,10 +1044,11 @@ public:
    */
     void getPositionSetPoint()
     {
+      ros::spinOnce();/*
       for(auto& cf : m_cfs)
       {
         cf->getSetpoint();
-      }
+      }*/
     }
 
     void Groupcontrol(int id,CrazyflieBroadcaster::AttSetPts& sp_state) {

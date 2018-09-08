@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/crazyflie_driver_generate_messages_cpp"
   "../../devel/include/crazyflie_driver/crtpPacket.h"
   "../../devel/include/crazyflie_driver/Position.h"
+  "../../devel/include/crazyflie_driver/state_tg.h"
   "../../devel/include/crazyflie_driver/Hover.h"
   "../../devel/include/crazyflie_driver/LogBlock.h"
   "../../devel/include/crazyflie_driver/FullState.h"

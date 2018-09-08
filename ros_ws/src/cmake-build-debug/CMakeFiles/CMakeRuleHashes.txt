@@ -20,6 +20,7 @@ c2ed3cc9ee88b9de4027ae0f82554cfe crazyflie_ros/crazyflie_driver/CMakeFiles/_craz
 584ef568b2c7c51b8af05cef0451ba2e crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_crtpPacket
 400e43186a22628e4c61b0bd023cec32 crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_getPosSetPoint
 a1abf9af891037b83db438c1b6ac5f4d crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_sendPacket
+deb9857e6de6612ad460dd8b24d9b8ce crazyflie_ros/crazyflie_driver/CMakeFiles/_crazyflie_driver_generate_messages_check_deps_state_tg
 cda9fdf3f11a7e30f43ab243a342b41c crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_cpp
 cda9fdf3f11a7e30f43ab243a342b41c crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_lisp
 cda9fdf3f11a7e30f43ab243a342b41c crazyflie_ros/crazyflie_driver/CMakeFiles/crazyflie_driver_generate_messages_py
@@ -43,6 +44,7 @@ d689e41075c101a4f4e134ecbdd46872 devel/include/crazyflie_driver/TrajectoryPolyno
 8f46cf452ff150d3dfefe6c00c86d93c devel/include/crazyflie_driver/crtpPacket.h
 50f25ed96d42fcff241592fe57719db2 devel/include/crazyflie_driver/getPosSetPoint.h
 67a729a79276efff6cc1805941909b5d devel/include/crazyflie_driver/sendPacket.h
+59784ecce903fa2b7a554aa31b9962a3 devel/include/crazyflie_driver/state_tg.h
 b7ee6b543de1a520bb1a49e5915d93a0 devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_FullState.py
 2f01ab204b2d27aba0394754318149f5 devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_GenericLogData.py
 813d2ccb2d9ee6e6e24b0db0ec4ddb4b devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_Hover.py
@@ -51,6 +53,7 @@ b7ee6b543de1a520bb1a49e5915d93a0 devel/lib/python2.7/dist-packages/crazyflie_dri
 d3cd5a9c2fed6c48a55b465765a88e62 devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_TrajectoryPolynomialPiece.py
 d8e37eb253f3f883866c93e6b66f1e74 devel/lib/python2.7/dist-packages/crazyflie_driver/msg/__init__.py
 353af1afe829307e6853d0afa295a743 devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_crtpPacket.py
+eef279d61fdecff8dce4a165044e24fa devel/lib/python2.7/dist-packages/crazyflie_driver/msg/_state_tg.py
 00d087d9c8f88d36cdabded877fd03d1 devel/lib/python2.7/dist-packages/crazyflie_driver/srv/_AddCrazyflie.py
 9cd9858e9bc518f3628e408e59843397 devel/lib/python2.7/dist-packages/crazyflie_driver/srv/_GoTo.py
 a4fc2c5f9a03dddc30f2a1abd4950a15 devel/lib/python2.7/dist-packages/crazyflie_driver/srv/_Land.py
@@ -72,6 +75,7 @@ b187d14b57a1dbf8063aa80522631ede devel/share/common-lisp/ros/crazyflie_driver/ms
 6fe31ce3f066150abf6b1a2632aeab71 devel/share/common-lisp/ros/crazyflie_driver/msg/Position.lisp
 e7dc80c070b921de2f43cdbbd9fb1046 devel/share/common-lisp/ros/crazyflie_driver/msg/TrajectoryPolynomialPiece.lisp
 cfd2ac682171ce77704a454e22c9cbde devel/share/common-lisp/ros/crazyflie_driver/msg/crtpPacket.lisp
+20badfd869afb2ce3fad7d72cd866d42 devel/share/common-lisp/ros/crazyflie_driver/msg/state_tg.lisp
 c6a1c3a5eb983b6f39e24469799bc624 devel/share/common-lisp/ros/crazyflie_driver/srv/AddCrazyflie.lisp
 6f03095522468ddf03947c7b23d2e864 devel/share/common-lisp/ros/crazyflie_driver/srv/GoTo.lisp
 0cf820bc8bd329d70951b46300a396c2 devel/share/common-lisp/ros/crazyflie_driver/srv/Land.lisp

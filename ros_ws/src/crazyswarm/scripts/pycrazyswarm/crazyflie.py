@@ -12,13 +12,16 @@ from crazyflie_driver.srv import TrajectoryRef
 from crazyflie_driver.msg import TrajectoryPolynomialPiece
 from tf import TransformListener
 
+from crazyflie_driver.msg import state_tg
+
 def arrayToGeometryPoint(a):
     return geometry_msgs.msg.Point(a[0], a[1], a[2])
 
 class TimeHelper:
     def __init__(self):
-        rospy.wait_for_service("/next_phase")
-        self.nextPhase = rospy.ServiceProxy("/next_phase", Empty)
+        pass
+        #rospy.wait_for_service("/next_phase")
+        #self.nextPhase = rospy.ServiceProxy("/next_phase", Empty)
 
     def time(self):
         return time.time()
@@ -38,7 +41,7 @@ class Crazyflie:
         self.initialPosition = np.array(initialPosition)
 
         self.tf = tf
-
+        '''
         rospy.wait_for_service(prefix + "/set_group_mask")
         self.setGroupMaskService = rospy.ServiceProxy(prefix + "/set_group_mask", SetGroupMask)
         rospy.wait_for_service(prefix + "/takeoff")
@@ -55,9 +58,10 @@ class Crazyflie:
         # self.startTrajectoryService = rospy.ServiceProxy(prefix + "/start_trajectory", StartTrajectory)
         rospy.wait_for_service(prefix + "/update_params")
         self.updateParamsService = rospy.ServiceProxy(prefix + "/update_params", UpdateParams)
-
+        '''
         #rospy.wait_for_service(prefix + "/set_trajectory_ref")
         #self.trajectoryRefService = rospy.ServiceProxy(prefix + "/set_trajectory_ref", TrajectoryRef)
+        self.a_flie_pub_traj_ref = rospy.Publisher(prefix + "/set_state",state_tg,queue_size=10)
 
 
     def setGroupMask(self, groupMask):
@@ -115,6 +119,7 @@ class CrazyflieServer:
     def __init__(self):
         rospy.init_node("CrazyflieAPI", anonymous=False)
         print "wait"
+        '''
         rospy.wait_for_service("/emergency")
         self.emergencyService = rospy.ServiceProxy("/emergency", Empty)
         print "ok"
@@ -132,7 +137,7 @@ class CrazyflieServer:
         # self.updateParamsService = rospy.ServiceProxy("/update_params", UpdateParams)
         rospy.wait_for_service("/set_trajectory_ref")
         self.trajectoryRefService = rospy.ServiceProxy("/set_trajectory_ref", TrajectoryRef)
-
+        '''
         print "okk"
 
         with open("../launch/crazyflies.yaml", 'r') as ymlfile:

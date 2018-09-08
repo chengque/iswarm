@@ -63,6 +63,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/TrajectoryPolynomialPiece.msg"
     "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/crtpPacket.msg"
     "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Hover.msg"
+    "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/state_tg.msg"
     "/home/chengque/workspace/catkin_ws/src/crazyswarm/ros_ws/src/crazyflie_ros/crazyflie_driver/msg/Position.msg"
     )
 endif()
